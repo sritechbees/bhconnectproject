@@ -15,7 +15,7 @@ export default function Header() {
     { name: "About", href: "/about/about_us" },
     { name: "Products", href: "/products/producthero" },
     { name: "Resources", href: "/resources/resourceshero" },
-    { name: "Core Program", href: "/contact/inquiryform" },
+    { name: "Core Program", href: "/coreprogram/corehero" },
     { name: "Contact", href: "/contact/contactsection" },
   ];
 

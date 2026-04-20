@@ -12,9 +12,9 @@ export default function Header() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about/aboutsection" },
-    { name: "Products", href: "/products/twoproductsection" },
-    { name: "Resources", href: "/resources/resouceshero" },
+    { name: "About", href: "/about/about_us" },
+    { name: "Products", href: "/products/producthero" },
+    { name: "Resources", href: "/resources/resourceshero" },
     { name: "Core Program", href: "/contact/inquiryform" },
     { name: "Contact", href: "/contact/contacthero" },
   ];
@@ -86,7 +86,7 @@ export default function Header() {
             hover:text-[#C9A14A]"
           >
             {/* Hover Animation */}
-            <span className="absolute inset-0 bg-black scale-x-0 origin-left 
+            <span className="absolute inset-0 bg-white scale-x-0 origin-left 
             group-hover:scale-x-100 transition-transform duration-500" />
 
             {/* Text shifted right */}

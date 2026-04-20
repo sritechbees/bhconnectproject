@@ -16,7 +16,7 @@ export default function Header() {
     { name: "Products", href: "/products/producthero" },
     { name: "Resources", href: "/resources/resourceshero" },
     { name: "Core Program", href: "/contact/inquiryform" },
-    { name: "Contact", href: "/contact/contacthero" },
+    { name: "Contact", href: "/contact/contactsection" },
   ];
 
   // Scroll effect

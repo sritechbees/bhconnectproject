@@ -3,11 +3,13 @@
 import App_layout from "@/layout/app_layout";
 import { motion } from "framer-motion";
 import AboutHero from "./abouthero";
+import Aboutone from "./aboutone";
 
-export default function AboutPage() {
+export default function About() {
   return (
     <App_layout>
       <AboutHero />
+       <Aboutone/>
 
       <section className="bg-[#111111] text-white py-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto space-y-24">

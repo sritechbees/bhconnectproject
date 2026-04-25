@@ -1,68 +1,87 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 
-export default function Hero() {
+export default function HeroSection() {
   return (
-    <section className="relative h-screen w-full bg-[#111111] text-white overflow-hidden flex items-center justify-center">
+    <section className="relative w-full min-h-screen mt-16 flex items-center justify-center bg-[#111111] overflow-hidden px-4 sm:px-6">
 
-      {/* Background subtle gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-[#111111] to-black opacity-90"></div>
+      {/* 🔹 Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/home/Beauty_Health.jpg"
+          alt="Beauty & Health"
+          fill
+          priority
+          className="object-cover opacity-70"
+        />
+      </div>
 
-      {/* Center Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
+      {/* 🔹 Dark Overlay */}
+      <div className="absolute inset-0 bg-black/40"></div>
 
-        {/* Heading */}
+      {/* 🔹 Subtle Glow (neutral, not yellow) */}
+      <div className="absolute w-[250px] sm:w-[350px] h-[250px] sm:h-[350px] bg-white/5 blur-[120px] rounded-full top-10 left-0"></div>
+      <div className="absolute w-[200px] sm:w-[300px] h-[200px] sm:h-[300px] bg-white/5 blur-[100px] rounded-full bottom-10 right-0"></div>
+
+      {/* 🔹 Content */}
+      <div className="relative z-10 max-w-4xl text-center">
+
+        {/* Title */}
         <motion.h1
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9 }}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight tracking-wide"
+          transition={{ duration: 0.8 }}
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
         >
-          We bring Korea’s finest beauty and health innovations
-          <br className="hidden md:block" />
-          to power modern medspas
+          We bring Korea’s finest{" "}
+          <span className="text-[#888888]">beauty and health</span>{" "}
+          innovations to power modern medspas
         </motion.h1>
 
-        {/* Divider line (Tesla style minimal) */}
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: "80px" }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          className="h-[2px] bg-white mx-auto mt-6"
-        ></motion.div>
-
-        {/* Subtle spacing */}
+        {/* Text */}
         <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.6 }}
-          transition={{ delay: 0.8 }}
-          className="mt-6 text-[#888888] text-sm md:text-base max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="mt-4 sm:mt-6 text-[#cccccc] text-sm sm:text-base md:text-lg max-w-2xl mx-auto"
         >
-          {/* Keeping minimal as Tesla style — no extra content */}
+          B&H Connected is a company dedicated to bringing carefully selected
+          Beauty and Health solutions from Korea to the United States.
         </motion.p>
 
         {/* Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1 }}
-          className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+          transition={{ delay: 0.6, duration: 0.8 }}
+          className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
         >
-          <button className="px-8 py-3 bg-white text-black text-sm font-medium rounded-full hover:bg-gray-200 transition">
-            Explore Products
-          </button>
 
-          <button className="px-8 py-3 border border-white text-sm rounded-full hover:bg-white hover:text-black transition">
-            Contact Us
-          </button>
+          {/* 🔹 Button 1 (Primary) */}
+          <Link href="/products/producthero">
+            <button className="relative px-6 sm:px-8 py-3 rounded-full bg-white text-black font-semibold overflow-hidden group">
+
+              <span className="absolute inset-0 bg-[#111111] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></span>
+
+              <span className="relative z-10 group-hover:text-white transition">
+                Explore Solutions
+              </span>
+            </button>
+          </Link>
+
+          {/* 🔹 Button 2 (Secondary) */}
+          <Link href="/contact/contactsection">
+            <button className="px-6 sm:px-8 py-3 rounded-full border border-white text-white hover:bg-white hover:text-black transition duration-300">
+              Contact Us
+            </button>
+          </Link>
+
         </motion.div>
 
       </div>
-
-      {/* Bottom fade (premium touch) */}
-      <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-black to-transparent"></div>
-
     </section>
   );
 }

@@ -41,7 +41,7 @@ export default function Header() {
         {/* 🔥 LOGO */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/home/logo3.png"
+            src="/home/logo.jpeg"
             alt="BH Connected Logo"
             width={160}
             height={60}

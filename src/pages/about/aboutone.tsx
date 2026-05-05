@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+
 export default function Aboutone
 () {
   useEffect(() => {
@@ -51,12 +52,12 @@ export default function Aboutone
 
           {/* Text */}
           <p className="text-[#cccccc] text-base sm:text-lg leading-relaxed mb-4">
-            B&H Connected is a premier company dedicated to bringing Korea’s most refined beauty and health innovations to the United States.
-          </p>
+          BH Connected is a company dedicated to bringing carefully selected Beauty and Health
+solutions from Korea to the United States.  </p>
 
           <p className="text-[#888888] text-base sm:text-lg leading-relaxed">
-            With deep insight into the Korean market, we carefully select only the most exceptional companies and products—those that meet the highest standards of quality, safety, and true effectiveness.
-          </p>
+            We focus on introducing only products and technologies that meet high standards of quality,
+safety, and real-world effectiveness. </p>
 
         </div>
 
@@ -80,6 +81,22 @@ export default function Aboutone
           </p>
         </div>
       </section>
+      
+       <section className="bg-white py-16 px-6 md:px-24 border-t border-gray-100">
+      <div className="max-w-4xl mx-auto">
+
+        <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-5">
+          Enhancing Lives Through Beauty, Health & Technology
+        </h2>
+
+        <div className="w-16 h-1 bg-gray-900 mb-6"></div>
+
+        <p className="text-gray-600 text-lg leading-relaxed">
+          We believe great products should serve people, improve well-being, and create meaningful value in everyday life. Every solution we offer is guided by one purpose — to enhance lives through better beauty and health. We design with intention, ensuring technology works for people, not the other way around.
+        </p>
+
+      </div>
+    </section>
 
       {/* 🔹 Section 3 */}
       <section className="py-20 px-6 md:px-16">
@@ -183,15 +200,6 @@ export default function Aboutone
   </div>
 </section>
 
-      {/* 🔹 Section 5 */}
-      <section className="py-20 px-6 md:px-16 text-center">
-        <h2 data-aos="fade-up" className="text-4xl font-semibold mb-6">
-          Licensed Medical Oversight
-        </h2>
-        <p data-aos="fade-up" className="text-[#cccccc] max-w-3xl mx-auto">
-          All treatments are supervised by licensed medical professionals, including Nurse Practitioners and Physicians, to ensure the highest standards of safety, quality, and medical oversight.
-        </p>
-      </section>
 
       {/* 🔹 Section 6 */}
       <section className="py-20 px-6 md:px-16 bg-[#0d0d0d]">

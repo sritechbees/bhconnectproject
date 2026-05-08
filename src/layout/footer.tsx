@@ -22,7 +22,7 @@ export default function Footer() {
               className="flex flex-col gap-4"
             >
               <Image
-                src="/home/logoo.jpeg"
+                src="/home/logo.png"
                 alt="iMESUSA Logo"
                 width={140}
                 height={40}

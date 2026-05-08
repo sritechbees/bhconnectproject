@@ -12,10 +12,9 @@ export default function Header() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about/about_us" },
-    { name: "Products", href: "/products/producthero" },
-    { name: "Resources", href: "/resources/resourceshero" },
-    { name: "Core Program", href: "/coreprogram/corehero" },
+    { name: "About", href: "/about/aboutpage" },
+    { name: "Products", href: "/products/productpage" },
+    { name: "Demo & Catalog", href: "/democatalog/democatalogpage" },
     { name: "Contact", href: "/contact/contactsection" },
   ];
 
@@ -41,7 +40,7 @@ export default function Header() {
         {/* 🔥 LOGO */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/home/logo.jpeg"
+            src="/home/logoo.png"
             alt="BH Connected Logo"
             width={160}
             height={60}

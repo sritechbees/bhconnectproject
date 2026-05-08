@@ -3,14 +3,17 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import App_layout from "@/layout/app_layout";
-
+import {
+  Download,
+  FileText,
+  ShieldCheck,
+} from "lucide-react";
 
 export default function Downloadcatalog() {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 1200,
       once: true,
     });
   }, []);
@@ -20,93 +23,137 @@ export default function Downloadcatalog() {
       title: "TMS Device Brochure",
       desc: "Learn more about Transcranial Magnetic Stimulation technology and its role in modern brain and mental wellness programs.",
       file: "/home/tms_brochure.jpg",
+      icon: <FileText className="w-6 h-6" />,
     },
+
     {
       title: "Electromagnetic Stimulation",
       desc: "Explore how electromagnetic stimulation devices support pain management and therapeutic recovery.",
       file: "/home/ems_brochure.jpg",
+      icon: <ShieldCheck className="w-6 h-6" />,
     },
+
     {
       title: "Product Catalog",
-      desc: "Download the complete iMESUSA product catalog including device details and technical specifications.",
+      desc: "Download the complete product catalog including device details and technical specifications.",
       file: "/home/product_catalog.png",
+      icon: <Download className="w-6 h-6" />,
     },
   ];
 
   return (
-   <App_layout>
-      <section className="relative bg-[#111111] py-24 mt-4 px-4 sm:px-6 overflow-hidden">
 
-        {/* Glow */}
-        <div className="absolute top-10 left-10 w-72 h-72 bg-white/5 blur-[120px] rounded-full"></div>
-        <div className="absolute bottom-10 right-10 w-72 h-72 bg-[#888888]/10 blur-[120px] rounded-full"></div>
+    <section className="relative bg-black py-24 mt-4 px-4 sm:px-6 overflow-hidden">
 
-        <div className="max-w-7xl mx-auto relative z-10">
+      {/* ===================================================== */}
+      {/* Background Glow */}
+      {/* ===================================================== */}
 
-          {/* Title */}
-          <div className="text-center mb-16">
+      <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-[#fed42a]/10 blur-[140px] rounded-full"></div>
 
-            <p
-              data-aos="fade-up"
-              className="text-[#888888] uppercase tracking-widest text-sm mb-3"
-            >
-              Resources
-            </p>
+      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-yellow-500/10 blur-[140px] rounded-full"></div>
 
-            <h2
-              data-aos="fade-up"
-              data-aos-delay="200"
-              className="text-3xl md:text-4xl font-semibold text-white mb-6"
-            >
-              Catalog & Brochures
-            </h2>
+      {/* ===================================================== */}
+      {/* Main Container */}
+      {/* ===================================================== */}
 
-            <p
-              data-aos="fade-up"
-              data-aos-delay="400"
-              className="max-w-3xl mx-auto text-[#888888]"
-            >
-              Access detailed brochures and product catalogs to learn more about
-              our medical technologies and solutions.
-            </p>
+      <div className="max-w-7xl mx-auto relative z-10">
 
-          </div>
+        {/* ===================================================== */}
+        {/* Heading */}
+        {/* ===================================================== */}
 
-          {/* Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="text-center mb-16">
 
-            {brochures.map((item, index) => (
-              <div
-                key={index}
-                data-aos="zoom-in"
-                data-aos-delay={index * 150}
-                className="bg-[#181818] border border-[#222] rounded-2xl p-6 hover:border-white/40 transition"
-              >
+          <p
+            data-aos="fade-up"
+            className="text-[#fed42a] uppercase tracking-[6px] text-sm mb-4"
+          >
+            Resources
+          </p>
 
-                <h3 className="text-lg font-medium text-white mb-3">
-                  {item.title}
-                </h3>
+          <h2
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
+          >
+            Catalog & <span className="text-[#fed42a]">Brochures</span>
+          </h2>
 
-                <p className="text-[#888888] text-sm mb-6">
-                  {item.desc}
-                </p>
-
-                <a
-                  href={item.file}
-                  download
-                  className="inline-block px-6 py-2 bg-white text-black rounded-full text-sm font-medium hover:bg-[#dddddd] transition"
-                >
-                  Download
-                </a>
-
-              </div>
-            ))}
-
-          </div>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="400"
+            className="max-w-3xl mx-auto text-gray-400 text-sm sm:text-base leading-relaxed"
+          >
+            Access detailed brochures and product catalogs to explore our
+            advanced beauty and healthcare technologies.
+          </p>
 
         </div>
 
-      </section>
-   </App_layout>
+        {/* ===================================================== */}
+        {/* Cards */}
+        {/* ===================================================== */}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          {brochures.map((item, index) => (
+            <div
+              key={index}
+              data-aos="zoom-in"
+              data-aos-delay={index * 150}
+              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-[#111111] to-black p-8 transition duration-500 hover:border-[#fed42a]/50 hover:-translate-y-2"
+            >
+
+              {/* Gold Hover Overlay */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-[#fed42a]/0 via-[#fed42a]/5 to-[#fed42a]/20 transition duration-700"></div>
+
+              {/* Content */}
+              <div className="relative z-10">
+
+                {/* Icon */}
+                <div className="w-14 h-14 rounded-2xl bg-[#fed42a]/10 border border-[#fed42a]/20 flex items-center justify-center text-[#fed42a] mb-6">
+                  {item.icon}
+                </div>
+
+                {/* Title */}
+                <h3 className="text-xl font-semibold text-white mb-4">
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-400 text-sm leading-relaxed mb-8">
+                  {item.desc}
+                </p>
+
+                {/* Download Button */}
+                <a
+                  href={item.file}
+                  download
+                  className="group/button relative inline-flex items-center gap-3 overflow-hidden px-6 py-3 rounded-full border border-[#fed42a]/30 bg-[#fed42a]/10 text-white font-medium transition-all duration-500 hover:scale-105"
+                >
+
+                  {/* Button Overlay */}
+                  <span className="absolute inset-0 bg-[#fed42a] translate-y-full group-hover/button:translate-y-0 transition-transform duration-500"></span>
+
+                  {/* Button Text */}
+                  <span className="relative z-10 group-hover/button:text-black transition duration-500">
+                    Download
+                  </span>
+
+                  <Download className="relative z-10 w-4 h-4 group-hover/button:text-black transition duration-500" />
+
+                </a>
+
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+
+      </div>
+
+    </section>
   );
 }

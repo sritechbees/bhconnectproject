@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import App_layout from "@/layout/app_layout";
+import Link from "next/link";
 
 type FormType = {
   name: string;
@@ -145,7 +146,7 @@ export default function ContactSection() {
                 </span>
 
               </button>
-
+  <Link href="/democatalog/democatalogpage">
               {/* Explore Button */}
               <button
                 className="group relative overflow-hidden px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white font-medium transition-all duration-500 hover:scale-105"
@@ -155,11 +156,12 @@ export default function ContactSection() {
                 <span className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500"></span>
 
                 {/* Text */}
+              
                 <span className="relative z-10 group-hover:text-black transition duration-500">
                   Explore Solutions
                 </span>
 
-              </button>
+              </button></Link>
 
             </motion.div>
 

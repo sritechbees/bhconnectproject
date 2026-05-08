@@ -361,7 +361,7 @@ export default function HomePage() {
 
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5">
 
-                <Link href="/contact/contactpage">
+                <Link href="/contact/contactsection">
                   <button className="w-full sm:w-auto px-10 py-4 rounded-full bg-[#fed42a] text-black font-semibold hover:bg-yellow-300 hover:scale-105 transition-all duration-300">
                     Contact Us
                   </button>

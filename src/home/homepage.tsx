@@ -54,102 +54,86 @@ export default function HomePage() {
 
       <section className="relative w-full min-h-screen overflow-hidden flex items-center justify-center">
 
-  {/* 🔹 Background Video */}
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    preload="auto"
-    className="absolute inset-0 w-full h-full object-cover"
-  >
-    <source src="/videos/fullvideo.mp4" type="video/mp4" />
-  </video>
+        {/* Background Video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/videos/fullvideo.mp4" type="video/mp4" />
+        </video>
 
-  {/* 🔹 Dark Overlay */}
-  <div className="absolute inset-0 bg-black/60 z-0"></div>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/20 z-0"></div>
 
-  {/* 🔹 Gradient Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/80 z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/80 z-0"></div>
 
-  {/* 🔹 Glow Effects */}
-  <div className="absolute top-[-100px] left-[-100px] w-[280px] sm:w-[350px] h-[280px] sm:h-[350px] bg-[#fed42a]/20 blur-[120px] rounded-full"></div>
+        {/* Hero Content */}
+        <div
+          data-aos="fade-up"
+          className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-10 text-center"
+        >
 
-  <div className="absolute bottom-[-100px] right-[-100px] w-[280px] sm:w-[350px] h-[280px] sm:h-[350px] bg-yellow-400/10 blur-[120px] rounded-full"></div>
+          <motion.h1
+            initial={{ opacity: 0, y: 80 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold leading-[1.1]"
+          >
+            Premium Beauty <br className="hidden sm:block" />
+            <span className="text-[#fed42a]">
+              & Health Solutions
+            </span>
+          </motion.h1>
 
-  {/* 🔹 Animated Circle */}
-  <motion.div
-    animate={{ y: [0, -20, 0] }}
-    transition={{ repeat: Infinity, duration: 5 }}
-    className="hidden md:block absolute top-24 right-16 w-36 h-36 border border-[#fed42a]/20 rounded-full backdrop-blur-sm"
-  />
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className="mt-6 text-sm sm:text-base md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+          >
+            Innovative Korean Technology crafted for the future of beauty,
+            wellness, and advanced healthcare experiences.
+          </motion.p>
 
-  {/* 🔹 Hero Content */}
-  <div
-    data-aos="fade-up"
-    className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-10 text-center"
-  >
+          {/* Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+            className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
 
-    {/* Heading */}
-    <motion.h1
-      initial={{ opacity: 0, y: 80 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold leading-[1.1] tracking-tight"
-    >
-      Premium Beauty <br className="hidden sm:block" />
-      <span className="text-[#fed42a]">& Health Solutions</span>
-    </motion.h1>
+            <Link href="/products/productpage">
+              <button className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-full bg-[#fed42a] text-black font-semibold text-sm sm:text-base hover:scale-105 hover:bg-yellow-300 transition-all duration-300">
+                Explore Products
+              </button>
+            </Link>
 
-    {/* Subtitle */}
-    <motion.p
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.4 }}
-      className="mt-6 text-sm sm:text-base md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
-    >
-      Innovative Korean Technology crafted for the future of beauty,
-      wellness, and advanced healthcare experiences.
-    </motion.p>
+            <Link href="/contact/contactsection">
+              <button className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-full border border-white/30 bg-white/5 backdrop-blur-md text-white font-medium text-sm sm:text-base hover:border-[#fed42a] hover:text-[#fed42a] transition-all duration-300">
+                Contact Us
+              </button>
+            </Link>
 
-    {/* Buttons */}
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.8 }}
-      className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
-    >
+          </motion.div>
 
-      {/* Explore Button */}
-      <Link href="/products/productpage">
-        <button className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-full bg-[#fed42a] text-black font-semibold text-sm sm:text-base hover:scale-105 hover:bg-yellow-300 transition-all duration-300 shadow-[0_0_40px_rgba(254,212,42,0.45)]">
-          Explore Products
-        </button>
-      </Link>
+        </div>
 
-      {/* Contact Button */}
-      <Link href="/contact/contactpage">
-        <button className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-full border border-white/30 bg-white/5 backdrop-blur-md text-white font-medium text-sm sm:text-base hover:border-[#fed42a] hover:text-[#fed42a] transition-all duration-300">
-          Contact Us
-        </button>
-      </Link>
-    </motion.div>
+        {/* Bottom Fade */}
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent"></div>
+      </section>
 
-  </div>
-
-  {/* 🔹 Bottom Fade */}
-  <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent"></div>
-
-</section>
       {/* ===================================================== */}
       {/* MAIN VIDEO SECTION */}
       {/* ===================================================== */}
 
-      <section className="relative py-28 px-6 md:px-10 overflow-hidden">
+      <section className="relative py-24 px-6 md:px-10 overflow-hidden bg-[#0a0a0a]">
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#111] to-black"></div>
-
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-7xl mx-auto">
 
           <div data-aos="fade-up" className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl font-bold text-[#fed42a]">
@@ -162,13 +146,13 @@ export default function HomePage() {
           </div>
 
           <motion.div
-            whileHover={{ scale: 1.02 }}
+            whileHover={{ scale: 1.01 }}
             transition={{ duration: 0.4 }}
             data-aos="zoom-in"
-            className="relative overflow-hidden rounded-[30px] border border-white/10 shadow-[0_0_80px_rgba(254,212,42,0.15)]"
+            className="relative overflow-hidden rounded-[30px] border border-white/10"
           >
             <video
-              src="/videos/vedio1.mp4"
+              src="/videos/tmsvedio2.mp4"
               autoPlay
               muted
               loop
@@ -183,11 +167,9 @@ export default function HomePage() {
       {/* PRODUCTS SECTION */}
       {/* ===================================================== */}
 
-      <section className="relative py-28 px-6 md:px-10 overflow-hidden">
+      <section className="relative py-24 px-6 md:px-10 overflow-hidden bg-black">
 
-        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#fed42a]/10 blur-[140px] rounded-full"></div>
-
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-7xl mx-auto">
 
           <div className="text-center mb-20" data-aos="fade-up">
             <h2 className="text-4xl md:text-5xl font-bold text-[#fed42a]">
@@ -208,13 +190,12 @@ export default function HomePage() {
               whileHover={{ y: -10 }}
               transition={{ duration: 0.4 }}
               data-aos="fade-right"
-              className="group relative overflow-hidden rounded-[35px] border border-white/10 bg-gradient-to-b from-[#111] to-black"
+              className="group relative overflow-hidden rounded-[35px] border border-white/10 bg-[#111111]"
             >
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-tr from-[#fed42a]/20 to-transparent"></div>
 
               <div className="relative h-[320px] overflow-hidden">
                 <Image
-                  src="/home/salus-1.jpg"
+                  src="/home/tmsproduct.jpeg"
                   alt="TMS"
                   fill
                   className="object-cover group-hover:scale-110 transition duration-700"
@@ -249,13 +230,12 @@ export default function HomePage() {
               whileHover={{ y: -10 }}
               transition={{ duration: 0.4 }}
               data-aos="fade-left"
-              className="group relative overflow-hidden rounded-[35px] border border-white/10 bg-gradient-to-b from-[#111] to-black"
+              className="group relative overflow-hidden rounded-[35px] border border-white/10 bg-[#111111]"
             >
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-tr from-[#fed42a]/20 to-transparent"></div>
 
               <div className="relative h-[320px] overflow-hidden">
                 <Image
-                  src="/home/altms.jpg"
+                  src="/home/pms.jpeg"
                   alt="PMS"
                   fill
                   className="object-cover group-hover:scale-110 transition duration-700"
@@ -283,6 +263,7 @@ export default function HomePage() {
                 </button>
               </div>
             </motion.div>
+
           </div>
         </div>
       </section>
@@ -291,11 +272,9 @@ export default function HomePage() {
       {/* WHY CHOOSE US */}
       {/* ===================================================== */}
 
-      <section className="relative py-28 px-6 md:px-10 bg-[#0a0a0a] overflow-hidden">
+      <section className="relative py-24 px-6 md:px-10 bg-[#0a0a0a] overflow-hidden">
 
-        <div className="absolute right-0 top-0 w-[300px] h-[300px] bg-[#fed42a]/10 blur-[120px] rounded-full"></div>
-
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-7xl mx-auto">
 
           <div className="text-center mb-20" data-aos="fade-up">
             <h2 className="text-4xl md:text-5xl font-bold text-[#fed42a]">
@@ -311,9 +290,8 @@ export default function HomePage() {
                 key={index}
                 data-aos="zoom-in"
                 data-aos-delay={index * 100}
-                className="relative p-8 rounded-[30px] border border-white/10 bg-gradient-to-b from-[#111] to-black overflow-hidden group"
+                className="relative p-8 rounded-[30px] border border-white/10 bg-[#111111] overflow-hidden"
               >
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-[#fed42a]/10 transition duration-500"></div>
 
                 <div className="relative z-10">
                   <div className="w-16 h-16 rounded-2xl bg-[#fed42a]/20 text-[#fed42a] flex items-center justify-center mb-6">
@@ -330,54 +308,77 @@ export default function HomePage() {
                 </div>
               </motion.div>
             ))}
+
           </div>
         </div>
       </section>
 
       {/* ===================================================== */}
-      {/* CTA SECTION */}
+      {/* NEW CTA SECTION */}
       {/* ===================================================== */}
 
-      <section className="relative py-32 px-6 overflow-hidden">
-
-        {/* Background Glow */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#fed42a]/10 via-transparent to-[#fed42a]/10"></div>
-
-        <motion.div
-          animate={{ scale: [1, 1.05, 1] }}
-          transition={{ repeat: Infinity, duration: 6 }}
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#fed42a]/10 blur-[180px] rounded-full"
-        />
+      <section className="relative py-28 px-6 md:px-10 bg-[#0a0a0a] overflow-hidden">
 
         <div
-          data-aos="zoom-in"
-          className="relative z-10 max-w-5xl mx-auto rounded-[40px] border border-white/10 bg-gradient-to-br from-[#111] to-black px-8 md:px-20 py-20 text-center shadow-[0_0_80px_rgba(254,212,42,0.15)]"
+          data-aos="fade-up"
+          className="max-w-7xl mx-auto"
         >
-          <h2 className="text-4xl md:text-6xl font-bold leading-tight">
-            Discover the Future of <br />
-            Beauty & Healthcare
-          </h2>
 
-          <p className="text-gray-400 mt-6 max-w-2xl mx-auto text-lg">
-            Connect with BH Connected and explore advanced solutions designed
-            for the next generation of wellness innovation.
-          </p>
+          <div className="relative rounded-[40px] overflow-hidden border border-white/10 bg-[#111111]">
 
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5">
-            <Link href="/contact/contactpage">
-              <button className="px-10 py-4 rounded-full bg-[#fed42a] text-black font-semibold hover:scale-105 hover:bg-yellow-300 transition-all duration-300 shadow-[0_0_40px_rgba(254,212,42,0.5)]">
-                Contact Us
-              </button>
-            </Link>
+            {/* Background Image */}
+            <div className="absolute inset-0">
+              <Image
+                src="/home/ctaimage.jpg"
+                alt="CTA"
+                fill
+                className="object-cover opacity-30"
+              />
+            </div>
 
-            <Link href="/products/productpage">
-              <button className="px-10 py-4 rounded-full border border-white/20 hover:border-[#fed42a] hover:text-[#fed42a] transition-all duration-300">
-                View Products
-              </button>
-            </Link>
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/70"></div>
+
+            {/* Content */}
+            <div className="relative z-10 px-6 sm:px-10 md:px-20 py-20 md:py-28 text-center">
+
+              <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#fed42a]/30 bg-[#fed42a]/10 text-[#fed42a] text-sm font-medium mb-8">
+                Premium Korean Innovation
+              </div>
+
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight max-w-5xl mx-auto">
+                Experience the Future of
+                <span className="text-[#fed42a]">
+                  {" "}Beauty & Healthcare
+                </span>
+              </h2>
+
+              <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto mt-6">
+                BH Connected delivers advanced beauty and healthcare technologies
+                designed to redefine wellness experiences with innovation,
+                performance, and trusted quality.
+              </p>
+
+              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5">
+
+                <Link href="/contact/contactpage">
+                  <button className="w-full sm:w-auto px-10 py-4 rounded-full bg-[#fed42a] text-black font-semibold hover:bg-yellow-300 hover:scale-105 transition-all duration-300">
+                    Contact Us
+                  </button>
+                </Link>
+
+                <Link href="/products/productpage">
+                  <button className="w-full sm:w-auto px-10 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md hover:border-[#fed42a] hover:text-[#fed42a] transition-all duration-300">
+                    View Products
+                  </button>
+                </Link>
+
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
     </div>
   );
 }

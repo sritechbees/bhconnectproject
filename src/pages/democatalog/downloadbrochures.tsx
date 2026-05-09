@@ -43,7 +43,7 @@ export default function Downloadcatalog() {
   ];
 
   return (
-
+<App_layout>
     <section className="relative bg-black py-24 mt-4 px-4 sm:px-6 overflow-hidden">
 
       {/* ===================================================== */}
@@ -156,6 +156,6 @@ export default function Downloadcatalog() {
       </div>
 
     </section>
-    
+    </App_layout>
   );
 }

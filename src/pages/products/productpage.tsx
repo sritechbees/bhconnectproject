@@ -219,19 +219,20 @@ export default function ProductsPage() {
 
                 {/* Button */}
                 <div className="pt-4">
-
+ <Link href="/democatalog/democatalogpage">
                   <button className="group relative overflow-hidden px-8 py-4 rounded-full border border-[#fed42a]/40 bg-[#fed42a]/10 backdrop-blur-md text-white font-medium transition-all duration-500 hover:scale-105">
 
                     {/* Overlay */}
                     <span className="absolute inset-0 bg-[#fed42a] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></span>
 
                     {/* Text */}
+                   
                     <span className="relative z-10 group-hover:text-black transition duration-500">
                       Learn More
                     </span>
 
                   </button>
-
+</Link>
                 </div>
 
               </motion.div>
@@ -315,11 +316,11 @@ export default function ProductsPage() {
                   Contact Us
                 </button>
               </Link>
-
+<Link href="/democatalog/downloadbrochures">
               <button className="px-10 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md hover:border-[#fed42a] hover:text-[#fed42a] transition duration-300">
                 Download Brochure
               </button>
-
+</Link>
             </div>
 
           </div>

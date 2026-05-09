@@ -217,10 +217,11 @@ export default function HomePage() {
                   Advanced therapeutic and wellness technology designed to
                   support modern healthcare experiences.
                 </p>
-
-                <button className="mt-8 px-6 py-3 rounded-full border border-[#fed42a]/40 hover:bg-[#fed42a] hover:text-black transition-all duration-300">
+                <Link href="/democatalog/tmsproductpage">
+            <button className="mt-8 px-6 py-3 rounded-full border border-[#fed42a]/40 hover:bg-[#fed42a] hover:text-black transition-all duration-300">
                   Learn More
                 </button>
+                </Link>
               </div>
             </motion.div>
 
@@ -257,10 +258,11 @@ export default function HomePage() {
                   Innovative performance-focused systems developed for enhanced
                   health and beauty applications.
                 </p>
-
+<Link href="/democatalog/painmanagement">
                 <button className="mt-8 px-6 py-3 rounded-full border border-[#fed42a]/40 hover:bg-[#fed42a] hover:text-black transition-all duration-300">
                   Learn More
                 </button>
+                </Link>
               </div>
             </motion.div>
 

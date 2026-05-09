@@ -96,11 +96,11 @@ export default function AboutPage() {
                 To bring Korea’s most innovative and leading beauty and health
                 solutions to the United States.
               </p>
-
+<Link href="/democatalog/gallerypage">
               <button className="mt-6 px-6 py-3 border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black transition duration-300 rounded-full">
                 Learn More
               </button>
-
+</Link>
             </div>
 
             {/* Right Image */}

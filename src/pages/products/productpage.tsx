@@ -100,10 +100,10 @@ export default function ProductsPage() {
 
             {/* Buttons */}
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-
+<Link href="/democatalog/gallerypage">
               <button className="px-8 py-4 rounded-full bg-[#fed42a] text-black font-semibold hover:bg-yellow-300 transition duration-300">
                 Explore Gallery
-              </button>
+              </button></Link>
 
               <Link href="/contact/contactsection">
                 <button className="px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md hover:border-[#fed42a] hover:text-[#fed42a] transition duration-300">

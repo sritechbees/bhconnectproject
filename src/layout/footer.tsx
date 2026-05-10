@@ -37,8 +37,8 @@ export default function Footer() {
 
                 <Image
                   src="/home/logo.png"
-                  alt="iMESUSA Logo"
-                  width={180}
+                  alt="BH Connected Logo"
+                  width={240}
                   height={60}
                   className="object-contain transition duration-500 group-hover:scale-105"
                 />
@@ -97,38 +97,47 @@ export default function Footer() {
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            <h3 className="text-xl font-semibold mb-3 text-[#fed42a]">
+            <h3 className="text-xl font-semibold mb-6 text-[#fed42a]">
               Contact Information
             </h3>
 
-            <div className="text-sm text-gray-400 leading-relaxed">
+            <div className=" text-sm text-gray-400 leading-relaxed">
 
-              
-              <div className="p-4 ">
-
-                <p className="text-white font-medium mb-2">
-                  Contact Details
+              {/* Phone */}
+              <div className=" rounded-2xl border border-white/5 bg-white/[0.02]">
+                <p className="text-white font-medium">
+                  Phone
                 </p>
 
-                <p>
-                  Tel. 1588-7395
-                </p>
-
-                <p>
-                  Fax. 031-606-5757
+                <p className="hover:text-[#fed42a] transition duration-300">
+                  949.838.7924
                 </p>
               </div>
 
-              <div className="p-4">
+              {/* Email */}
+              <div className="rounded-2xl border border-white/5 bg-white/[0.02]">
+                <p className="text-white font-medium mt-2">
+                  Email
+                </p>
 
-                <p className="text-white font-medium mb-2">
+                <a
+                  href="mailto:Sales@BHconnected.com"
+                  className="hover:text-[#fed42a] transition duration-300 break-all"
+                >
+                  Sales@BHconnected.com
+                </a>
+              </div>
+
+              {/* Address */}
+              <div className=" rounded-2xl border border-white/5 bg-white/[0.02]">
+                <p className="text-white font-medium mb-">
                   Address
                 </p>
 
                 <p className="leading-7">
-                  21-7, Wiryeseo-1-gil, Seongnam-si,
-                  Sujeong-gu, Gyeonggi-do, 13647,
-                  Republic of Korea (Changgok-dong)
+                  Aliso Viejo,<br />
+                  CA 92656,<br />
+                  USA
                 </p>
               </div>
 
@@ -136,44 +145,46 @@ export default function Footer() {
           </div>
 
         </div>
-{/* Divider */}
-<div
-  data-aos="fade-up"
-  data-aos-delay="400"
-  className="mt-16 pt-8 border-t border-gradient-to-r from-transparent via-white/10 to-transparent"
->
 
-  <div className="flex flex-col md:flex-row items-center justify-between gap-5">
+        {/* Divider */}
+        <div
+          data-aos="fade-up"
+          data-aos-delay="400"
+          className="mt-16 pt-8 border-t border-white/10"
+        >
 
-    {/* Copyright */}
-    <div className="flex items-center gap-3">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-5">
 
-      {/* Small Glow Dot */}
-      <div className="w-2 h-2 rounded-full bg-[#fed42a] shadow-[0_0_12px_#fed42a] animate-pulse"></div>
+            {/* Copyright */}
+            <div className="flex items-center gap-3">
 
-      <p className="text-sm text-gray-300 text-center md:text-left tracking-wide">
-        © REMED. All Rights Reserved.
-      </p>
+              {/* Small Glow Dot */}
+              <div className="w-2 h-2 rounded-full bg-[#fed42a] shadow-[0_0_12px_#fed42a] animate-pulse"></div>
 
-    </div>
+              <p className="text-sm text-gray-300 text-center md:text-left tracking-wide">
+                © BH Connected. All Rights Reserved.
+              </p>
 
-    {/* Footer Links */}
-    <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-sm">
+            </div>
 
-      <span className="relative cursor-pointer text-gray-500 hover:text-[#fed42a] transition duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#fed42a] hover:after:w-full after:transition-all after:duration-300">
-        Privacy Policy
-      </span>
+            {/* Footer Links */}
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-sm">
 
-      <div className="w-1 h-1 rounded-full bg-gray-600 hidden sm:block"></div>
+              <span className="relative cursor-pointer text-gray-500 hover:text-[#fed42a] transition duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#fed42a] hover:after:w-full after:transition-all after:duration-300">
+                Privacy Policy
+              </span>
 
-      <span className="relative cursor-pointer text-gray-500 hover:text-[#fed42a] transition duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#fed42a] hover:after:w-full after:transition-all after:duration-300">
-        Terms of Service
-      </span>
+              <div className="w-1 h-1 rounded-full bg-gray-600 hidden sm:block"></div>
 
-    </div>
+              <span className="relative cursor-pointer text-gray-500 hover:text-[#fed42a] transition duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#fed42a] hover:after:w-full after:transition-all after:duration-300">
+                Terms of Service
+              </span>
 
-  </div>
-</div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </footer>
   );

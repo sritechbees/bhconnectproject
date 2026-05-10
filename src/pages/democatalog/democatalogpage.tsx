@@ -322,11 +322,11 @@ export default function DemoCatalogPage() {
                 </button>
 
               </Link>
-
+<Link href="/democatalog/gallerypage">
               <button className="px-10 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md hover:border-[#fed42a] hover:text-[#fed42a] transition duration-300">
                 Explore Gallary
               </button>
-
+</Link>
             </div>
 
           </div>

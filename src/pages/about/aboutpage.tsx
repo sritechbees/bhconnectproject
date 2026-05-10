@@ -93,8 +93,9 @@ export default function AboutPage() {
               </h2>
 
               <p className="text-gray-300 leading-relaxed">
-                To bring Korea’s most innovative and leading beauty and health
-                solutions to the United States.
+                Connecting Beauty, Health, and Human Care through innovative Korean wellness solutions.
+
+                
               </p>
 <Link href="/democatalog/gallerypage">
               <button className="mt-6 px-6 py-3 border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black transition duration-300 rounded-full">
@@ -104,17 +105,7 @@ export default function AboutPage() {
             </div>
 
             {/* Right Image */}
-            <div data-aos="fade-left">
-
-              <Image
-                src="/home/tms treatment-1.jpg"
-                alt="Mission"
-                width={500}
-                height={400}
-                className="rounded-2xl object-cover w-full"
-              />
-
-            </div>
+            
 
           </div>
 
@@ -128,7 +119,7 @@ export default function AboutPage() {
             >
 
               <Image
-                src="/home/tms treatment-3.jpg"
+                src="/home/who.png"
                 alt="Who We Are"
                 width={500}
                 height={400}
@@ -151,6 +142,9 @@ export default function AboutPage() {
                 BH Connected is dedicated to delivering carefully selected beauty
                 and health solutions from Korea. We introduce only products that
                 meet high standards of quality, safety, and real-world effectiveness.
+              
+                <p>To bring Korea’s most innovative and leading beauty and health
+                solutions to the United States.</p>
               </p>
 
             </div>

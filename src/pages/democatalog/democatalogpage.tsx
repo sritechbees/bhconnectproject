@@ -18,14 +18,14 @@ export default function DemoCatalogPage() {
     {
       title: "TMS Therapy Demo",
       desc: "Advanced Transcranial Magnetic Stimulation technology demonstration.",
-      thumbnail: "/home/tms treatment-3.jpg",
+      thumbnail: "/home/tms image.jpeg",
       video: "/videos/tmsfull.mp4",
     },
 
     {
       title: "PMS Therapy Demo",
       desc: "Premium electromagnetic stimulation system demonstration.",
-      thumbnail: "/home/tms treatment-3.jpg",
+      thumbnail: "/home/pms image.jpeg",
       video: "/videos/painmanagementfull.mp4",
     },
   ];

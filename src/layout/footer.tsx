@@ -38,7 +38,7 @@ export default function Footer() {
                 <Image
                   src="/home/BH logo New.png"
                   alt="BH Connected Logo"
-                  width={240}
+                  width={185}
                   height={60}
                   className="object-contain transition duration-500 group-hover:scale-105"
                 />

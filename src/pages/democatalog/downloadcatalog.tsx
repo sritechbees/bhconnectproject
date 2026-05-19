@@ -129,7 +129,7 @@ export default function Downloadcatalog() {
 
                     {/* Button Text */}
                     <span className="relative z-10 group-hover/button:text-black transition duration-500">
-                      Download (TMS)
+                      {item.file2 ? "Download (TMS)" : "Download"}
                     </span>
 
                     <Download className="relative z-10 w-4 h-4 group-hover/button:text-black transition duration-500" />

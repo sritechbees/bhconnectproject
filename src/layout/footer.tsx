@@ -36,7 +36,7 @@ export default function Footer() {
               <div className="flex flex-col gap-5 cursor-pointer">
 
                 <Image
-                  src="/home/logo.png"
+                  src="/home/BH logo New.png"
                   alt="BH Connected Logo"
                   width={240}
                   height={60}

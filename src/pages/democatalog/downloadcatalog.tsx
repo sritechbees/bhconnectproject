@@ -3,15 +3,14 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 import {
   Download,
   FileText,
   ShieldCheck,
 } from "lucide-react";
-import App_layout from "@/layout/app_layout";
 
 export default function Downloadcatalog() {
-
   useEffect(() => {
     AOS.init({
       duration: 1200,
@@ -35,35 +34,26 @@ export default function Downloadcatalog() {
     },
 
     {
-      title: "Product Catalog",
+      title: "E-flyer",
       desc: "Download the complete product catalog including device details and technical specifications.",
-      file: "/home/product_catalog.png",
+      file: "/home/TMS e-flyer.PDF",
+      file2: "/home/Pain Management e-flyer.pdf",
       icon: <Download className="w-6 h-6" />,
     },
   ];
 
   return (
-
     <section className="relative bg-black py-24 mt-4 px-4 sm:px-6 overflow-hidden">
 
-      {/* ===================================================== */}
       {/* Background Glow */}
-      {/* ===================================================== */}
-
       <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-[#fed42a]/10 blur-[140px] rounded-full"></div>
 
       <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-yellow-500/10 blur-[140px] rounded-full"></div>
 
-      {/* ===================================================== */}
       {/* Main Container */}
-      {/* ===================================================== */}
-
       <div className="max-w-7xl mx-auto relative z-10">
 
-        {/* ===================================================== */}
         {/* Heading */}
-        {/* ===================================================== */}
-
         <div className="text-center mb-16">
 
           <p
@@ -92,10 +82,7 @@ export default function Downloadcatalog() {
 
         </div>
 
-        {/* ===================================================== */}
         {/* Cards */}
-        {/* ===================================================== */}
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {brochures.map((item, index) => (
@@ -127,24 +114,50 @@ export default function Downloadcatalog() {
                   {item.desc}
                 </p>
 
-                {/* Download Button */}
-                <a
-                  href={item.file}
-                  download
-                  className="group/button relative inline-flex items-center gap-3 overflow-hidden px-6 py-3 rounded-full border border-[#fed42a]/30 bg-[#fed42a]/10 text-white font-medium transition-all duration-500 hover:scale-105"
-                >
+                {/* Download Buttons */}
+                <div className="flex flex-wrap gap-4">
 
-                  {/* Button Overlay */}
-                  <span className="absolute inset-0 bg-[#fed42a] translate-y-full group-hover/button:translate-y-0 transition-transform duration-500"></span>
+                  {/* First Download */}
+                  <a
+                    href={item.file}
+                    download
+                    className="group/button relative inline-flex items-center gap-3 overflow-hidden px-6 py-3 rounded-full border border-[#fed42a]/30 bg-[#fed42a]/10 text-white font-medium transition-all duration-500 hover:scale-105"
+                  >
 
-                  {/* Button Text */}
-                  <span className="relative z-10 group-hover/button:text-black transition duration-500">
-                    Download
-                  </span>
+                    {/* Button Overlay */}
+                    <span className="absolute inset-0 bg-[#fed42a] translate-y-full group-hover/button:translate-y-0 transition-transform duration-500"></span>
 
-                  <Download className="relative z-10 w-4 h-4 group-hover/button:text-black transition duration-500" />
+                    {/* Button Text */}
+                    <span className="relative z-10 group-hover/button:text-black transition duration-500">
+                      Download (TMS)
+                    </span>
 
-                </a>
+                    <Download className="relative z-10 w-4 h-4 group-hover/button:text-black transition duration-500" />
+
+                  </a>
+
+                  {/* Second Download Only for E-flyer */}
+                  {item.file2 && (
+                    <a
+                      href={item.file2}
+                      download
+                      className="group/button relative inline-flex items-center gap-3 overflow-hidden px-6 py-3 rounded-full border border-[#fed42a]/30 bg-[#fed42a]/10 text-white font-medium transition-all duration-500 hover:scale-105"
+                    >
+
+                      {/* Button Overlay */}
+                      <span className="absolute inset-0 bg-[#fed42a] translate-y-full group-hover/button:translate-y-0 transition-transform duration-500"></span>
+
+                      {/* Button Text */}
+                      <span className="relative z-10 group-hover/button:text-black transition duration-500">
+                        Download (PMS)
+                      </span>
+
+                      <Download className="relative z-10 w-4 h-4 group-hover/button:text-black transition duration-500" />
+
+                    </a>
+                  )}
+
+                </div>
 
               </div>
 
@@ -156,6 +169,5 @@ export default function Downloadcatalog() {
       </div>
 
     </section>
-    
   );
 }

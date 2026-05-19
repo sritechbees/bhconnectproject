@@ -200,7 +200,7 @@ export default function PainManagementPage() {
               <div className="relative h-[280px] sm:h-[450px] md:h-[550px] overflow-hidden">
 
                 <Image
-                  src="/pain_managment/Smart TMT.jpg"
+                  src="/pain_managment/smart tmt.jpg"
                   alt="RF"
                   fill
                   className="object-cover group-hover:scale-105 transition duration-700"

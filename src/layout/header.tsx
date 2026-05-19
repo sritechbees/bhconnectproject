@@ -62,7 +62,7 @@ export default function Header() {
             className="flex items-center flex-shrink-0"
           >
             <Image
-              src="/home/logoo.png"
+              src="/home/BH logo New.png"
               alt="BH Connected"
               width={170}
               height={60}

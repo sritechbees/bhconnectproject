@@ -162,46 +162,36 @@ export default function TMSPage() {
             </div>
 
             {/* PRODUCTS */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+           <div className="grid grid-cols-1 gap-8 justify-items-center">
+  {[
+    {
+      image: "/tms product/ALTMS.jpg",
+      title: "ALTMS",
+    },
+  ].map((item, index) => (
+    <div
+      key={index}
+      data-aos="fade-up"
+      data-aos-delay={index * 100}
+      className="group overflow-hidden rounded-[32px] bg-[#121212] border border-white/5 hover:border-[#fed42a]/40 transition-all duration-500 hover:-translate-y-2 w-full max-w-md"
+    >
+      <div className="relative h-[320px] sm:h-[380px] overflow-hidden">
+        <Image
+          src={item.image}
+          alt={item.title}
+          fill
+          className="object-contain p-6 group-hover:scale-110 transition duration-700"
+        />
+      </div>
 
-              {[
-                {
-                  image: "/tms product/ALTMS.jpg",
-                  title: "ALTMS",
-                },
-                {
-                  image: "/tms product/BrainStim.jpg",
-                  title: "BrainStim",
-                },
-                {
-                  image: "/tms product/BrainStim 100.jpg",
-                  title: "BrainStim 100",
-                },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
-                  className="group overflow-hidden rounded-[32px] bg-[#121212] border border-white/5 hover:border-[#fed42a]/40 transition-all duration-500 hover:-translate-y-2"
-                >
-                  <div className="relative h-[320px] sm:h-[380px] overflow-hidden">
-
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-contain p-6 group-hover:scale-110 transition duration-700"
-                    />
-                  </div>
-
-                  <div className="pb-7 text-center">
-                    <h3 className="text-xl sm:text-2xl font-semibold">
-                      {item.title}
-                    </h3>
-                  </div>
-                </div>
-              ))}
-            </div>
+      <div className="pb-7 text-center">
+        <h3 className="text-xl sm:text-2xl font-semibold">
+          {item.title}
+        </h3>
+      </div>
+    </div>
+  ))}
+</div>
           </div>
         </section>
 
@@ -212,15 +202,7 @@ export default function TMSPage() {
         <section className="relative py-24 px-4 sm:px-6 md:px-10 lg:px-16 overflow-hidden">
 
           {/* BG IMAGE */}
-          <div className="absolute inset-0">
-
-            <Image
-              src="/tms product/tms-bg.jpg"
-              alt="Background"
-              fill
-              className="object-cover"
-            />
-          </div>
+      
 
           {/* OVERLAY */}
           <div className="absolute inset-0 bg-black/80"></div>

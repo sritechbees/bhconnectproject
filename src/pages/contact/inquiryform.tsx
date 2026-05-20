@@ -45,7 +45,7 @@ export default function InquiryForm() {
           <div className="absolute bottom-[-100px] right-[-100px] w-[320px] h-[320px] bg-[#fed42a]/10 blur-[140px] rounded-full"></div>
 
           {/* Content */}
-          <div className="relative z-10 mt-16 text-center px-4 sm:px-6 max-w-4xl">
+          <div className="relative z-10 mt-16 text-center px-4  sm:px-6 max-w-4xl">
 
             <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#fed42a]/30 bg-[#fed42a]/10 backdrop-blur-md text-[#fed42a] text-xs sm:text-sm tracking-[3px] uppercase mb-6">
               BH Connected

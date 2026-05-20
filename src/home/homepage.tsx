@@ -77,202 +77,221 @@ export default function HomePage() {
         <div className="absolute bottom-[-100px] right-[-100px] w-[220px] sm:w-[320px] h-[220px] sm:h-[320px] bg-[#fed42a]/10 blur-[120px] rounded-full z-0"></div>
 
         {/* HERO CONTENT */}
-        <div
-          data-aos="fade-up"
-          className="
-            relative
-            z-10
-            w-full
-            max-w-7xl
-            mx-auto
-            px-4
-            sm:px-6
-            md:px-10
-            text-center
-            pt-28
-            sm:pt-32
-            pb-24
-          "
-        >
 
-          {/* TOP TAG */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="
-              inline-flex
-              items-center
-              justify-center
-              px-3
-              sm:px-5
-              py-2
-              rounded-full
-              border
-              border-[#fed42a]/30
-              bg-[#fed42a]/10
-              text-[#fed42a]
-              text-[10px]
-              sm:text-xs
-              md:text-sm
-              tracking-[1px]
-              sm:tracking-[2px]
-              uppercase
-              mb-5
-              sm:mb-6
-            "
-          >
-            Advanced Korean Technology
-          </motion.div>
+<div
+  data-aos="fade-up"
+  className="
+    relative
+    z-10
+    w-full
+    max-w-7xl
+    mx-auto
+    px-4
+    sm:px-6
+    md:px-10
+    text-center
+    pt-24
+    sm:pt-28
+    md:pt-32
+    lg:pt-36
+    pb-20
+    sm:pb-24
+  "
+>
 
-          {/* TITLE */}
-          <motion.h1
-            initial={{ opacity: 0, y: 70 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="
-              text-3xl
-              sm:text-4xl
-              md:text-5xl
-              lg:text-6xl
-              xl:text-7xl
-              font-bold
-              leading-[1.15]
-            "
-          >
-            Premium Beauty
+  {/* TOP TAG */}
 
-            <br className="hidden sm:block" />
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+    className="
+      inline-flex
+      items-center
+      justify-center
+      px-3
+      sm:px-5
+      py-2
+      rounded-full
+      border
+      border-[#fed42a]/30
+      bg-[#fed42a]/10
+      text-[#fed42a]
+      text-[9px]
+      sm:text-xs
+      md:text-sm
+      tracking-[1px]
+      sm:tracking-[2px]
+      uppercase
+      mb-5
+      sm:mb-6
+      backdrop-blur-md
+    "
+  >
+    Advanced Korean Technology
+  </motion.div>
 
-            <span className="text-[#fed42a]">
-              {" "} & Health Solutions
-            </span>
-          </motion.h1>
+  {/* TITLE */}
 
-          {/* DESCRIPTION */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="
-              mt-5
-              sm:mt-6
-              text-sm
-              sm:text-base
-              md:text-lg
-              lg:text-xl
-              text-gray-300
-              max-w-3xl
-              mx-auto
-              leading-relaxed
-              px-2
-            "
-          >
-            Innovative Korean Technology crafted for the future
-            of beauty, wellness, and advanced healthcare experiences.
-          </motion.p>
+  <motion.h1
+    initial={{ opacity: 0, y: 70 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+    className="
+      font-bold
+      leading-[1.15]
+      text-[32px]
+      xs:text-[36px]
+      sm:text-4xl
+      md:text-5xl
+      lg:text-6xl
+      xl:text-[72px]
+    "
+  >
+    Premium Beauty
 
-          {/* BUTTONS */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-            className="
-              mt-8
-              sm:mt-10
-              flex
-              flex-col
-              sm:flex-row
-              items-center
-              justify-center
-              gap-4
-              w-full
-            "
-          >
+    <br className="hidden sm:block" />
 
-            {/* BUTTON 1 */}
-            <Link
-              href="/products/productpage"
-              className="w-full sm:w-auto"
-            >
-              <button
-                className="
-                  w-full
-                  sm:w-auto
-                  min-w-[220px]
-                  px-6
-                  sm:px-10
-                  py-3
-                  sm:py-4
-                  rounded-full
-                  bg-[#fed42a]
-                  text-black
-                  font-semibold
-                  text-sm
-                  sm:text-base
-                  hover:scale-105
-                  hover:bg-yellow-300
-                  transition-all
-                  duration-300
-                  shadow-[0_0_30px_rgba(254,212,42,0.35)]
-                "
-              >
-                Explore Products
-              </button>
-            </Link>
+    <span className="text-[#fed42a]">
+      {" "} & Health Solutions
+    </span>
+  </motion.h1>
 
-            {/* BUTTON 2 */}
-            <Link
-              href="/contact/contactsection"
-              className="w-full sm:w-auto"
-            >
-              <button
-                className="
-                  w-full
-                  sm:w-auto
-                  min-w-[220px]
-                  px-6
-                  sm:px-10
-                  py-3
-                  sm:py-4
-                  rounded-full
-                  border
-                  border-white/30
-                  bg-white/5
-                  backdrop-blur-md
-                  text-white
-                  font-medium
-                  text-sm
-                  sm:text-base
-                  hover:border-[#fed42a]
-                  hover:text-[#fed42a]
-                  transition-all
-                  duration-300
-                "
-              >
-                Contact Us
-              </button>
-            </Link>
+  {/* DESCRIPTION */}
 
-          </motion.div>
+  <motion.p
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.4 }}
+    className="
+      mt-5
+      sm:mt-6
+      text-[13px]
+      sm:text-base
+      md:text-lg
+      lg:text-xl
+      text-gray-300
+      max-w-3xl
+      mx-auto
+      leading-relaxed
+      px-2
+      sm:px-0
+    "
+  >
+    Innovative Korean Technology crafted for the future
+    of beauty, wellness, and advanced healthcare experiences.
+  </motion.p>
 
-        </div>
+  {/* BUTTONS */}
 
-        {/* SLIDER DOTS */}
-        <div className="absolute bottom-8 sm:bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-2 sm:gap-3 z-20">
+  <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.8 }}
+    className="
+      mt-8
+      sm:mt-10
+      flex
+      flex-col
+      sm:flex-row
+      items-center
+      justify-center
+      gap-3
+      sm:gap-4
+      w-full
+      max-w-xl
+      mx-auto
+    "
+  >
 
-          {heroImages.map((_, index) => (
-            <div
-              key={index}
-              className={`transition-all duration-500 rounded-full ${
-                currentImage === index
-                  ? "w-8 sm:w-10 h-2 bg-[#fed42a]"
-                  : "w-2 h-2 bg-white/50"
-              }`}
-            />
-          ))}
+    {/* BUTTON 1 */}
 
-        </div>
+    <Link
+      href="/products/productpage"
+      className="w-full sm:w-auto"
+    >
+      <button
+        className="
+          w-full
+          sm:w-auto
+          min-w-[200px]
+          sm:min-w-[220px]
+          px-6
+          sm:px-8
+          py-3
+          sm:py-3.5
+          rounded-full
+          bg-[#fed42a]
+          text-black
+          font-semibold
+          text-sm
+          sm:text-base
+          hover:scale-105
+          hover:bg-yellow-300
+          transition-all
+          duration-300
+          shadow-lg max-sm:w-12
+        "
+      >
+        Explore Products
+      </button>
+    </Link>
+
+    {/* BUTTON 2 */}
+
+    <Link
+      href="/contact/contactsection"
+      className="w-full sm:w-auto"
+    >
+      <button
+        className="
+          w-full
+          sm:w-auto
+          min-w-[200px]
+          sm:min-w-[220px]
+          px-6
+          sm:px-8
+          py-3
+          sm:py-3.5
+          rounded-full
+          border
+          border-white/30
+          bg-white/5
+          backdrop-blur-md
+          text-white
+          font-medium
+          text-sm
+          sm:text-base
+          hover:border-[#fed42a]
+          hover:text-[#fed42a]
+          transition-all
+          duration-300 max-sm:w-12
+        "
+      >
+        Contact Us
+      </button>
+    </Link>
+
+  </motion.div>
+
+</div>
+
+{/* SLIDER DOTS */}
+
+<div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 sm:gap-3 z-20">
+
+  {heroImages.map((_, index) => (
+    <div
+      key={index}
+      className={`transition-all duration-500 rounded-full ${
+        currentImage === index
+          ? "w-7 sm:w-10 h-2 bg-[#fed42a]"
+          : "w-2 h-2 bg-white/50"
+      }`}
+    />
+  ))}
+
+</div>
 
         {/* BOTTOM FADE */}
         <div className="absolute bottom-0 left-0 w-full h-24 sm:h-32 bg-gradient-to-t from-black to-transparent"></div>

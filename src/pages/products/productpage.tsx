@@ -1,9 +1,13 @@
 "use client";
 
+import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import App_layout from "@/layout/app_layout";
 import { motion } from "framer-motion";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const products = [
   {
@@ -45,75 +49,173 @@ const galleryImages = [
   "/home/tmsproduct.jpeg",
   "/home/tms treatment-1.jpg",
   "/home/tms treatment-3.jpg",
-    "/home/brainstim.jpg",
+  "/home/brainstim.jpg",
   "/home/brain eyes.png",
   "/home/pms.jpeg",
 ];
 
 export default function ProductsPage() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <App_layout>
 
-      <div className="bg-black text-white overflow-hidden">
+      <div className="bg-black text-white overflow-hidden w-full">
 
         {/* ===================================================== */}
         {/* PAGE HEADER */}
         {/* ===================================================== */}
 
-        <section className="relative h-[90vh] mt-16 flex items-center justify-center text-center overflow-hidden px-6">
+        <section className="relative min-h-[90vh] mt-16 flex items-center justify-center text-center overflow-hidden px-4 sm:px-6">
 
           {/* Background Image */}
+
           <Image
             src="/home/products.jpg"
             alt="Products"
             fill
-            className="object-cover opacity-70"
+            priority
+            className="object-cover object-center opacity-90"
           />
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black/20"></div>
 
-          {/* Gold Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-[#fed42a]/10 to-black"></div>
+          <div className="absolute inset-0"></div>
+
+          {/* Gradient Overlay */}
+
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/80"></div>
 
           {/* Content */}
-          <div className="relative z-10 max-w-4xl mx-auto">
+
+          <div
+            className="relative z-10 max-w-4xl mx-auto w-full"
+            data-aos="fade-up"
+          >
+
+            {/* Heading */}
 
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
-              className="text-4xl md:text-6xl font-bold leading-tight"
+              className="
+                text-[34px]
+                sm:text-5xl
+                md:text-6xl
+                font-bold
+                leading-tight max-sm:mt-4
+              "
             >
-              Our <span className="text-[#fed42a]">Product Line</span>
+              Our{" "}
+
+              <span className="text-[#fed42a]">
+                Product Line
+              </span>
+
             </motion.h1>
+
+            {/* Description */}
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9 }}
-              className="text-gray-300 mt-5 text-sm sm:text-base md:text-lg leading-relaxed"
+              className="
+                text-gray-300
+                mt-5
+                text-sm
+                sm:text-base
+                md:text-lg
+                leading-relaxed
+                max-w-2xl
+                mx-auto
+                px-2
+              "
             >
-              Carefully selected beauty and health technologies from Korea,
-              designed to redefine modern wellness experiences.
+              Carefully selected beauty and health technologies
+              from Korea, designed to redefine modern wellness
+              experiences.
             </motion.p>
 
             {/* Buttons */}
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-<Link href="/democatalog/gallerypage">
-              <button className="px-8 py-4 rounded-full bg-[#fed42a] text-black font-semibold hover:bg-yellow-300 transition duration-300">
-                Explore Gallery
-              </button></Link>
 
-              <Link href="/contact/contactsection">
-                <button className="px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md hover:border-[#fed42a] hover:text-[#fed42a] transition duration-300">
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
+
+              <Link
+                href="/democatalog/gallerypage"
+                className="w-full sm:w-auto"
+              >
+
+                <button
+                  className="
+                    w-full
+                    sm:w-auto
+                    min-w-[220px]
+                    px-8
+                    py-3.5
+                    rounded-full
+                    bg-[#fed42a]
+                    text-black
+                    font-semibold
+                    text-sm
+                    sm:text-base
+                    hover:bg-yellow-300
+                    hover:scale-105
+                    transition-all
+                    duration-300 max-sm:w-12
+                  "
+                >
+                  Explore Gallery
+                </button>
+
+              </Link>
+
+              <Link
+                href="/contact/contactsection"
+                className="w-full sm:w-auto"
+              >
+
+                <button
+                  className="
+                    w-full
+                    sm:w-auto
+                    min-w-[220px]
+                    px-8
+                    py-3.5
+                    rounded-full
+                    border
+                    border-white/20
+                    bg-white/5
+                    backdrop-blur-md
+                    text-white
+                    text-sm
+                    sm:text-base
+                    hover:border-[#fed42a]
+                    hover:text-[#fed42a]
+                    hover:scale-105
+                    transition-all
+                    duration-300 max-sm:w-12
+                  "
+                >
                   Contact Us
                 </button>
+
               </Link>
 
             </div>
 
           </div>
+
+          {/* Bottom Fade */}
+
+          <div className="absolute bottom-0 left-0 w-full h-24 sm:h-32 bg-gradient-to-t from-black to-transparent"></div>
 
         </section>
 
@@ -121,22 +223,34 @@ export default function ProductsPage() {
         {/* PRODUCTS SECTION */}
         {/* ===================================================== */}
 
-        <section className="max-w-7xl mx-auto px-6 md:px-10 py-24 space-y-28">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-16 sm:py-24 space-y-20 sm:space-y-28 overflow-hidden">
 
           {products.map((product, index) => (
+
             <div
               key={index}
-              className="grid md:grid-cols-2 gap-14 items-center"
+              className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-center"
             >
 
               {/* IMAGE */}
+
               <motion.div
                 initial={{ opacity: 0, x: index % 2 === 0 ? -60 : 60 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.7 }}
-                className={`relative h-[300px] sm:h-[400px] md:h-[500px] rounded-3xl overflow-hidden border border-[#222] group ${
-                  index % 2 !== 0 ? "md:order-2" : ""
-                }`}
+                data-aos="fade-up"
+                className={`
+                  relative
+                  h-[280px]
+                  sm:h-[380px]
+                  md:h-[480px]
+                  rounded-3xl
+                  overflow-hidden
+                  border
+                  border-[#222]
+                  group
+                  ${index % 2 !== 0 ? "md:order-2" : ""}
+                `}
               >
 
                 <Image
@@ -147,19 +261,24 @@ export default function ProductsPage() {
                 />
 
                 {/* Overlay */}
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/10"></div>
 
                 {/* Floating Label */}
-                <div className="absolute top-6 left-6">
-                  <p className="text-xs tracking-[6px] text-white/70 uppercase">
+
+                <div className="absolute top-5 left-5 sm:top-6 sm:left-6">
+
+                  <p className="text-[10px] sm:text-xs tracking-[4px] sm:tracking-[6px] text-white/70 uppercase">
                     {product.name}
                   </p>
+
                 </div>
 
                 {/* Bottom Text */}
-                <div className="absolute bottom-8 left-6 right-6">
 
-                  <h2 className="text-3xl md:text-5xl font-bold leading-tight">
+                <div className="absolute bottom-6 left-5 right-5 sm:bottom-8 sm:left-6 sm:right-6">
+
+                  <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-tight">
                     {product.title}
                   </h2>
 
@@ -172,16 +291,18 @@ export default function ProductsPage() {
               </motion.div>
 
               {/* CONTENT */}
+
               <motion.div
                 initial={{ opacity: 0, x: index % 2 === 0 ? 60 : -60 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.7 }}
+                data-aos="fade-up"
                 className="space-y-6"
               >
 
                 <div>
 
-                  <h3 className="text-2xl md:text-3xl font-semibold text-[#fed42a]">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#fed42a]">
                     {product.name} Therapy System
                   </h3>
 
@@ -189,7 +310,7 @@ export default function ProductsPage() {
 
                 </div>
 
-                <p className="text-gray-300 leading-relaxed text-sm md:text-base">
+                <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                   {product.description}
                 </p>
 
@@ -198,12 +319,24 @@ export default function ProductsPage() {
                 </p>
 
                 {/* Benefits */}
-                <div className="grid sm:grid-cols-2 gap-4 pt-4">
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
 
                   {product.benefits.map((item, i) => (
+
                     <div
                       key={i}
-                      className="flex items-start gap-3 p-4 border border-[#222] rounded-xl hover:border-[#fed42a]/40 transition"
+                      className="
+                        flex
+                        items-start
+                        gap-3
+                        p-4
+                        border
+                        border-[#222]
+                        rounded-xl
+                        hover:border-[#fed42a]/40
+                        transition
+                      "
                     >
 
                       <div className="w-2 h-2 bg-[#fed42a] rounded-full mt-2"></div>
@@ -213,31 +346,62 @@ export default function ProductsPage() {
                       </p>
 
                     </div>
+
                   ))}
 
                 </div>
 
                 {/* Button */}
+
                 <div className="pt-4">
- <Link href="/democatalog/democatalogpage">
-                  <button className="group relative overflow-hidden px-8 py-4 rounded-full border border-[#fed42a]/40 bg-[#fed42a]/10 backdrop-blur-md text-white font-medium transition-all duration-500 hover:scale-105">
 
-                    {/* Overlay */}
-                    <span className="absolute inset-0 bg-[#fed42a] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></span>
+                  <Link href="/democatalog/democatalogpage">
 
-                    {/* Text */}
-                   
-                    <span className="relative z-10 group-hover:text-black transition duration-500">
-                      Learn More
-                    </span>
+                    <button
+                      className="
+                        group
+                        relative
+                        overflow-hidden
+                        w-full
+                        sm:w-auto
+                        min-w-[220px]
+                        px-8
+                        py-3.5
+                        rounded-full
+                        border
+                        border-[#fed42a]/40
+                        bg-[#fed42a]/10
+                        backdrop-blur-md
+                        text-white
+                        font-medium
+                        text-sm
+                        sm:text-base
+                        transition-all
+                        duration-500
+                        hover:scale-105 max-sm:w-12
+                      "
+                    >
 
-                  </button>
-</Link>
+                      {/* Overlay */}
+
+                      <span className="absolute inset-0 bg-[#fed42a] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></span>
+
+                      {/* Text */}
+
+                      <span className="relative z-10 group-hover:text-black transition duration-500">
+                        Learn More
+                      </span>
+
+                    </button>
+
+                  </Link>
+
                 </div>
 
               </motion.div>
 
             </div>
+
           ))}
 
         </section>
@@ -246,31 +410,53 @@ export default function ProductsPage() {
         {/* PRODUCT GALLERY */}
         {/* ===================================================== */}
 
-        <section className="py-24 px-6 md:px-10 bg-[#0a0a0a]">
+        <section className="py-16 sm:py-24 px-4 sm:px-6 md:px-10 bg-[#0a0a0a] overflow-hidden">
 
           <div className="max-w-7xl mx-auto">
 
             {/* Heading */}
-            <div className="text-center mb-16">
 
-              <h2 className="text-4xl md:text-5xl font-bold">
-                Product <span className="text-[#fed42a]">Gallery</span>
+            <div
+              className="text-center mb-14 sm:mb-16"
+              data-aos="fade-up"
+            >
+
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+
+                Product{" "}
+
+                <span className="text-[#fed42a]">
+                  Gallery
+                </span>
+
               </h2>
 
-              <p className="text-gray-400 mt-4">
+              <p className="text-gray-400 mt-4 text-sm sm:text-base">
                 Explore our premium beauty and healthcare technologies.
               </p>
 
             </div>
 
             {/* Gallery Grid */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
               {galleryImages.map((img, index) => (
+
                 <motion.div
                   key={index}
                   whileHover={{ scale: 1.03 }}
-                  className="relative h-[260px] rounded-3xl overflow-hidden group border border-[#222]"
+                  data-aos="zoom-in"
+                  className="
+                    relative
+                    h-[240px]
+                    sm:h-[260px]
+                    rounded-3xl
+                    overflow-hidden
+                    group
+                    border
+                    border-[#222]
+                  "
                 >
 
                   <Image
@@ -283,6 +469,7 @@ export default function ProductsPage() {
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition duration-500"></div>
 
                 </motion.div>
+
               ))}
 
             </div>
@@ -295,32 +482,87 @@ export default function ProductsPage() {
         {/* CTA SECTION */}
         {/* ===================================================== */}
 
-        <section className="py-24 px-6 text-center">
+        <section className="py-16 sm:py-24 px-4 sm:px-6 text-center overflow-hidden">
 
-          <div className="max-w-4xl mx-auto">
+          <div
+            className="max-w-4xl mx-auto"
+            data-aos="fade-up"
+          >
 
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
               Discover Advanced Beauty & Healthcare Solutions
             </h2>
 
-            <p className="text-gray-400 mt-5 max-w-2xl mx-auto">
-              Connect with BH Connected and explore premium Korean innovation
-              designed for modern wellness experiences.
+            <p className="text-gray-400 mt-5 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+              Connect with BH Connected and explore premium Korean
+              innovation designed for modern wellness experiences.
             </p>
 
             {/* Buttons */}
+
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5">
 
-              <Link href="/contact/contactsection">
-                <button className="px-10 py-4 rounded-full bg-[#fed42a] text-black font-semibold hover:bg-yellow-300 transition duration-300">
+              <Link
+                href="/contact/contactsection"
+                className="w-full sm:w-auto"
+              >
+
+                <button
+                  className="
+                    w-full
+                    sm:w-auto
+                    min-w-[220px]
+                    px-10
+                    py-3.5
+                    rounded-full
+                    bg-[#fed42a]
+                    text-black
+                    font-semibold
+                    text-sm
+                    sm:text-base
+                    hover:bg-yellow-300
+                    hover:scale-105
+                    transition-all
+                    duration-300 max-sm:w-12
+                  "
+                >
                   Contact Us
                 </button>
+
               </Link>
-<Link href="/democatalog/downloadbrochures">
-              <button className="px-10 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md hover:border-[#fed42a] hover:text-[#fed42a] transition duration-300">
-                Download Brochure
-              </button>
-</Link>
+
+              <Link
+                href="/democatalog/downloadbrochures"
+                className="w-full sm:w-auto"
+              >
+
+                <button
+                  className="
+                    w-full
+                    sm:w-auto
+                    min-w-[220px]
+                    px-10
+                    py-3.5
+                    rounded-full
+                    border
+                    border-white/20
+                    bg-white/5
+                    backdrop-blur-md
+                    text-white
+                    text-sm
+                    sm:text-base
+                    hover:border-[#fed42a]
+                    hover:text-[#fed42a]
+                    hover:scale-105
+                    transition-all
+                    duration-300 max-sm:w-12
+                  "
+                >
+                  Download Brochure
+                </button>
+
+              </Link>
+
             </div>
 
           </div>

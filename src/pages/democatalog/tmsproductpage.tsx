@@ -264,16 +264,16 @@ export default function TMSPage() {
 
       {[
         {
-          image: "/tms product/ALTMS.jpg",
+          image: "/home/ALTMS.png",
           title: "ALTMS",
         },
         {
           image: "/home/tms1.png",
-          title: "TMS Coils",
+          title: "ALTMS with Patient",
         },
         {
           image: "/home/tmsproduct.jpeg",
-          title: "Robot Arm",
+          title: "ALTMS Treatment Session",
         },
       ].map((item, index) => (
         <div

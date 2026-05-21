@@ -354,29 +354,19 @@ export default function TMSPage() {
             </div>
 
             {/* ACCESSORIES GRID */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6">
 
               {[
                 {
                   image: "/tms product/TMS Coils.png",
                   title: "TMS Coils",
                 },
-                {
-                  image: "/tms product/Brain Eyes.png",
-                  title: "BrainEyes",
-                },
-                {
-                  image: "/tms product/Myo1.png",
-                  title: "Myo1",
-                },
+                
                 {
                   image: "/tms product/Treatment Chair.png",
                   title: "Treatment Chair",
                 },
-                {
-                  image: "/tms product/Robot Arm.png",
-                  title: "Robot Arm",
-                },
+                
               ].map((item, index) => (
                 <div
                   key={index}

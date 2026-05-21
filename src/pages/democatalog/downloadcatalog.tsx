@@ -22,14 +22,14 @@ export default function Downloadcatalog() {
     {
       title: "TMS Device Brochure",
       desc: "Learn more about Transcranial Magnetic Stimulation technology and its role in modern brain and mental wellness programs.",
-      file: "/home/tms_brochure.jpg",
+      file: "/tms product/altms.pdf",
       icon: <FileText className="w-6 h-6" />,
     },
 
     {
       title: "Electromagnetic Stimulation",
       desc: "Explore how electromagnetic stimulation devices support pain management and therapeutic recovery.",
-      file: "/home/ems_brochure.jpg",
+      file: "/pain_managment/pms.pdf",
       icon: <ShieldCheck className="w-6 h-6" />,
     },
 

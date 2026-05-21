@@ -95,7 +95,7 @@ export default function Header() {
                 transition={{ duration: 0.3 }}
               >
                 <Image
-                  src="/home/BH logo.png"
+                  src="/home/BH logoo.png"
                   alt="BH Connected"
                   width={180}
                   height={70}

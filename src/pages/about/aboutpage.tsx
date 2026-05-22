@@ -18,7 +18,7 @@ export default function AboutPage() {
 
   return (
     <App_layout>
-        <Herosection/>
+        {/* <Herosection/> */}
       <div className="bg-black text-white overflow-hidden w-full">
 
         {/* ====================================================== */}

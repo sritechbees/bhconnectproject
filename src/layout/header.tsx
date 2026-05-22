@@ -76,7 +76,7 @@ export default function Header() {
           top-0
           left-0
           w-full
-          z-50 
+          z-50
           transition-all
           duration-500
           ${
@@ -84,14 +84,13 @@ export default function Header() {
               ? scrolled
                 ? "bg-black/90 backdrop-blur-xl border-b border-white/10 shadow-xl"
                 : "bg-transparent"
-              : "bg-black/90 backdrop-blur-xl  border-b border-white/10 shadow-xl"
+              : "bg-black/90 backdrop-blur-xl border-b border-white/10 shadow-xl"
           }
         `}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
           <div className="flex items-center justify-between h-[68px] sm:h-[74px] lg:h-[96px]">
-            
+
             {/* ========================================= */}
             {/* LOGO */}
             {/* ========================================= */}
@@ -204,6 +203,8 @@ export default function Header() {
                   shadow-[0_0_20px_rgba(254,212,42,0.20)]
                 "
               >
+                <span className="absolute inset-0 bg-white scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100" />
+
                 <span className="relative z-10">
                   Inquiry
                 </span>
@@ -229,6 +230,8 @@ export default function Header() {
               "
               aria-label="Toggle Menu"
             >
+              {/* TOP */}
+
               <span
                 className={`
                   absolute
@@ -245,6 +248,8 @@ export default function Header() {
                 `}
               />
 
+              {/* MIDDLE */}
+
               <span
                 className={`
                   absolute
@@ -260,6 +265,8 @@ export default function Header() {
                   }
                 `}
               />
+
+              {/* BOTTOM */}
 
               <span
                 className={`
@@ -308,7 +315,7 @@ export default function Header() {
               "
             >
               <div className="flex flex-col px-6 sm:px-8 py-10">
-                
+
                 {/* MOBILE NAV LINKS */}
 
                 <div className="flex flex-col gap-6">
@@ -377,11 +384,18 @@ export default function Header() {
                       transition-all
                       duration-300
                       hover:scale-105
+                      shadow-[0_0_30px_rgba(254,212,42,0.25)]
                     "
                   >
                     Inquiry
                   </Link>
                 </motion.div>
+
+                {/* GLOW EFFECT */}
+
+                <div className="mt-16 flex justify-center">
+                  <div className="w-40 h-40 bg-[#fed42a]/10 blur-3xl rounded-full" />
+                </div>
               </div>
             </motion.div>
           )}

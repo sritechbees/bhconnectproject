@@ -12,11 +12,11 @@ export default function HomePage() {
   const [currentImage, setCurrentImage] = useState(0);
 
   const heroImages = [
-    "/home/home1.png",
+    "/home/Banner-1.png",
     "/home/home2.png",
-    "/home/home3.png",
-    "/home/home4.png",
-    "/home/home5.png",
+    "/home/Banner-3.png",
+    "/home/Banner-4.png",
+    "/home/Banner-5.png",
   ];
 
   useEffect(() => {
@@ -56,7 +56,7 @@ export default function HomePage() {
                 alt="Hero Background"
                 fill
                 priority
-                className="object-fill max-sm:object-fill object-center"
+                className="object-fill max-sm:object-contain object-center"
               />
             </motion.div>
           </AnimatePresence>

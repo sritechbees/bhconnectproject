@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import App_layout from "@/layout/app_layout";
 import Link from "next/link";
 
+
 type FormType = {
   name: string;
   clinic: string;

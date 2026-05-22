@@ -56,7 +56,7 @@ export default function HomePage() {
                 alt="Hero Background"
                 fill
                 priority
-                className="object-fill max-sm:object-contain object-center"
+                className="object-fill max-sm:object-fill object-center"
               />
             </motion.div>
           </AnimatePresence>

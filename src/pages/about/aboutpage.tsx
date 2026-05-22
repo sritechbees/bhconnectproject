@@ -4,6 +4,7 @@ import { useRef } from "react";
 import App_layout from "@/layout/app_layout";
 import Image from "next/image";
 import Link from "next/link";
+import Herosection from "@/common/herosection";
 
 export default function AboutPage() {
 
@@ -17,7 +18,7 @@ export default function AboutPage() {
 
   return (
     <App_layout>
-
+        <Herosection/>
       <div className="bg-black text-white overflow-hidden w-full">
 
         {/* ====================================================== */}

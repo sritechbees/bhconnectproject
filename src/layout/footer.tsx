@@ -50,7 +50,7 @@ export default function Footer() {
                 {/* LOGO */}
 
                 <Image
-                  src="/home/BH logoo.png"
+                  src="/home/BH logo4.png"
                   alt="BH Connected Logo"
                   width={185}
                   height={60}

@@ -354,12 +354,16 @@ export default function TMSPage() {
             </div>
 
             {/* ACCESSORIES GRID */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-6">
 
               {[
                 {
                   image: "/tms product/TMS Coils.png",
                   title: "TMS Coils",
+                },
+                {
+                  image: "/tms product/tms text.jpeg",
+                  title: "TMS ",
                 },
                 
                 {

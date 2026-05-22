@@ -26,7 +26,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setScrolled(window.scrollY > 80);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -71,16 +71,26 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-          isHomePage
-            ? scrolled
-              ? "bg-[#0b0b0b]/95 backdrop-blur-2xl border-b border-white/10 shadow-2xl"
-              : "bg-transparent"
-            : "bg-[#0b0b0b]/95 backdrop-blur-2xl border-b border-white/10 shadow-xl"
-        }`}
+        className={`
+          fixed
+          top-0
+          left-0
+          w-full
+          z-50 
+          transition-all
+          duration-500
+          ${
+            isHomePage
+              ? scrolled
+                ? "bg-black/90 backdrop-blur-xl border-b border-white/10 shadow-xl"
+                : "bg-transparent"
+              : "bg-black/90 backdrop-blur-xl  border-b border-white/10 shadow-xl"
+          }
+        `}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-[72px] sm:h-[82px] lg:h-[92px]">
+          
+          <div className="flex items-center justify-between h-[68px] sm:h-[74px] lg:h-[96px]">
             
             {/* ========================================= */}
             {/* LOGO */}
@@ -88,25 +98,25 @@ export default function Header() {
 
             <Link
               href="/"
-              className="relative flex items-center flex-shrink-0 group"
+              className="relative flex items-center flex-shrink-0"
             >
               <motion.div
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3 }}
               >
                 <Image
-                  src="/home/BH logoo.png"
+                  src="/home/BH logo4.png"
                   alt="BH Connected"
-                  width={180}
-                  height={70}
+                  width={160}
+                  height={60}
                   priority
                   className="
-                    w-[110px]
-                    xs:w-[120px]
-                    sm:w-[145px]
-                    md:w-[155px]
-                    lg:w-[175px]
-                    xl:w-[185px]
+                    w-[90px]
+                    xs:w-[100px]
+                    sm:w-[115px]
+                    md:w-[125px]
+                    lg:w-[145px]
+                    xl:w-[155px]
                     h-auto
                     object-contain
                     transition-all
@@ -120,7 +130,7 @@ export default function Header() {
             {/* DESKTOP NAVIGATION */}
             {/* ========================================= */}
 
-            <nav className="hidden lg:flex items-center gap-8 xl:gap-10">
+            <nav className="hidden lg:flex items-center gap-7 xl:gap-9">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
 
@@ -128,22 +138,41 @@ export default function Header() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`relative group font-medium tracking-wide transition-all duration-300 ${
-                      isActive
-                        ? "text-[#fed42a]"
-                        : "text-white hover:text-[#fed42a]"
-                    } text-[15px] xl:text-[16px]`}
+                    className={`
+                      relative
+                      group
+                      font-medium
+                      tracking-wide
+                      transition-all
+                      duration-300
+                      text-[14px]
+                      xl:text-[15px]
+                      ${
+                        isActive
+                          ? "text-[#fed42a]"
+                          : "text-white hover:text-[#fed42a]"
+                      }
+                    `}
                   >
                     {link.name}
 
-                    {/* Animated Underline */}
+                    {/* UNDERLINE */}
 
                     <span
-                      className={`absolute left-0 -bottom-2 h-[2px] bg-[#fed42a] transition-all duration-300 ${
-                        isActive
-                          ? "w-full"
-                          : "w-0 group-hover:w-full"
-                      }`}
+                      className={`
+                        absolute
+                        left-0
+                        -bottom-2
+                        h-[2px]
+                        bg-[#fed42a]
+                        transition-all
+                        duration-300
+                        ${
+                          isActive
+                            ? "w-full"
+                            : "w-0 group-hover:w-full"
+                        }
+                      `}
                     />
                   </Link>
                 );
@@ -162,22 +191,19 @@ export default function Header() {
                   relative
                   overflow-hidden
                   rounded-full
-                  px-6 xl:px-7
-                  py-2.5 xl:py-3
+                  px-5
+                  xl:px-6
+                  py-2.5
                   bg-[#fed42a]
                   text-black
-                  text-sm xl:text-[15px]
+                  text-sm
                   font-semibold
                   transition-all
                   duration-500
                   hover:scale-105
-                  shadow-[0_0_25px_rgba(254,212,42,0.25)]
+                  shadow-[0_0_20px_rgba(254,212,42,0.20)]
                 "
               >
-                {/* Hover Effect */}
-
-                <span className="absolute inset-0 bg-white scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100" />
-
                 <span className="relative z-10">
                   Inquiry
                 </span>
@@ -198,33 +224,57 @@ export default function Header() {
                 flex-col
                 justify-center
                 items-center
-                w-10
-                h-10
+                w-9
+                h-9
               "
               aria-label="Toggle Menu"
             >
               <span
-                className={`absolute w-6 h-[2px] bg-[#fed42a] transition-all duration-300 ${
-                  menuOpen
-                    ? "rotate-45"
-                    : "-translate-y-2"
-                }`}
+                className={`
+                  absolute
+                  w-5
+                  h-[2px]
+                  bg-[#fed42a]
+                  transition-all
+                  duration-300
+                  ${
+                    menuOpen
+                      ? "rotate-45"
+                      : "-translate-y-1.5"
+                  }
+                `}
               />
 
               <span
-                className={`absolute w-6 h-[2px] bg-[#fed42a] transition-all duration-300 ${
-                  menuOpen
-                    ? "opacity-0"
-                    : "opacity-100"
-                }`}
+                className={`
+                  absolute
+                  w-5
+                  h-[2px]
+                  bg-[#fed42a]
+                  transition-all
+                  duration-300
+                  ${
+                    menuOpen
+                      ? "opacity-0"
+                      : "opacity-100"
+                  }
+                `}
               />
 
               <span
-                className={`absolute w-6 h-[2px] bg-[#fed42a] transition-all duration-300 ${
-                  menuOpen
-                    ? "-rotate-45"
-                    : "translate-y-2"
-                }`}
+                className={`
+                  absolute
+                  w-5
+                  h-[2px]
+                  bg-[#fed42a]
+                  transition-all
+                  duration-300
+                  ${
+                    menuOpen
+                      ? "-rotate-45"
+                      : "translate-y-1.5"
+                  }
+                `}
               />
             </button>
           </div>
@@ -237,20 +287,20 @@ export default function Header() {
         <AnimatePresence>
           {menuOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -25 }}
+              initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -25 }}
-              transition={{ duration: 0.35 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
               className="
                 lg:hidden
                 fixed
-                top-[72px]
-                sm:top-[82px]
+                top-[68px]
+                sm:top-[74px]
                 left-0
                 w-full
-                h-[calc(100vh-72px)]
-                sm:h-[calc(100vh-82px)]
-                bg-[#050505]/95
+                h-[calc(100vh-68px)]
+                sm:h-[calc(100vh-74px)]
+                bg-black/95
                 backdrop-blur-2xl
                 border-t
                 border-white/10
@@ -259,30 +309,38 @@ export default function Header() {
             >
               <div className="flex flex-col px-6 sm:px-8 py-10">
                 
-                {/* NAVIGATION LINKS */}
+                {/* MOBILE NAV LINKS */}
 
-                <div className="flex flex-col gap-7">
+                <div className="flex flex-col gap-6">
                   {navLinks.map((link, index) => {
                     const isActive = pathname === link.href;
 
                     return (
                       <motion.div
                         key={link.name}
-                        initial={{ opacity: 0, x: -30 }}
+                        initial={{ opacity: 0, x: -25 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{
-                          delay: index * 0.08,
-                          duration: 0.4,
+                          delay: index * 0.07,
+                          duration: 0.35,
                         }}
                       >
                         <Link
                           href={link.href}
                           onClick={() => setMenuOpen(false)}
-                          className={`relative text-[18px] sm:text-[20px] font-semibold tracking-wide transition-all duration-300 ${
-                            isActive
-                              ? "text-[#fed42a]"
-                              : "text-white hover:text-[#fed42a]"
-                          }`}
+                          className={`
+                            text-[17px]
+                            sm:text-[18px]
+                            font-semibold
+                            tracking-wide
+                            transition-all
+                            duration-300
+                            ${
+                              isActive
+                                ? "text-[#fed42a]"
+                                : "text-white hover:text-[#fed42a]"
+                            }
+                          `}
                         >
                           {link.name}
                         </Link>
@@ -294,11 +352,11 @@ export default function Header() {
                 {/* MOBILE BUTTON */}
 
                 <motion.div
-                  initial={{ opacity: 0, y: 25 }}
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
-                    delay: 0.4,
-                    duration: 0.4,
+                    delay: 0.35,
+                    duration: 0.35,
                   }}
                   className="mt-10"
                 >
@@ -311,27 +369,19 @@ export default function Header() {
                       justify-center
                       rounded-full
                       bg-[#fed42a]
-                      px-8
-                      py-3.5
+                      px-7
+                      py-3
                       text-black
                       text-sm
-                      sm:text-[15px]
                       font-semibold
                       transition-all
                       duration-300
                       hover:scale-105
-                      shadow-[0_0_30px_rgba(254,212,42,0.25)]
                     "
                   >
                     Inquiry
                   </Link>
                 </motion.div>
-
-                {/* EXTRA MOBILE EFFECT */}
-
-                <div className="mt-16 flex justify-center">
-                  <div className="w-40 h-40 bg-[#fed42a]/10 blur-3xl rounded-full" />
-                </div>
               </div>
             </motion.div>
           )}

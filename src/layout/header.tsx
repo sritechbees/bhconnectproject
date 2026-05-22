@@ -18,6 +18,7 @@ export default function Header() {
     { name: "Products", href: "/products/productpage" },
     { name: "Demo & Catalog", href: "/democatalog/democatalogpage" },
     { name: "Contact", href: "/contact/contactsection" },
+     { name: "samplehero", href: "/samplehero/herosection" },
   ];
 
   // =========================================

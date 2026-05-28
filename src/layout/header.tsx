@@ -8,7 +8,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
   const pathname = usePathname();
 
@@ -18,26 +17,10 @@ export default function Header() {
     { name: "Products", href: "/products/productpage" },
     { name: "Demo & Catalog", href: "/democatalog/democatalogpage" },
     { name: "Contact", href: "/contact/contactsection" },
-     { name: "samplehero", href: "/samplehero/herosection" },
+   
   ];
 
-  // =========================================
-  // SCROLL EFFECT
-  // =========================================
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 80);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // =========================================
-  // CLOSE MENU ON RESIZE
-  // =========================================
+  // CLOSE MENU ON DESKTOP
 
   useEffect(() => {
     const handleResize = () => {
@@ -51,9 +34,7 @@ export default function Header() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // =========================================
   // BODY SCROLL LOCK
-  // =========================================
 
   useEffect(() => {
     if (menuOpen) {
@@ -67,38 +48,41 @@ export default function Header() {
     };
   }, [menuOpen]);
 
-  const isHomePage = pathname === "/";
-
   return (
     <>
       <header
-        className={`
+        className="
           fixed
           top-0
           left-0
           w-full
           z-50
-          transition-all
-          duration-500
-          ${
-            isHomePage
-              ? scrolled
-                ? "bg-black/90 backdrop-blur-xl border-b border-white/10 shadow-xl"
-                : "bg-transparent"
-              : "bg-black/90 backdrop-blur-xl border-b border-white/10 shadow-xl"
-          }
-        `}
+          h-[105px]
+          py-2
+          bg-black
+          border-b
+        
+          shadow-lg
+        "
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-[68px] sm:h-[74px] lg:h-[96px]">
-
-            {/* ========================================= */}
+          <div
+            className="
+              flex
+              items-center
+              justify-between
+              h-[70px]
+              sm:h-[78px]
+              lg:h-[88px]
+            "
+          >
+            {/* ===================================== */}
             {/* LOGO */}
-            {/* ========================================= */}
+            {/* ===================================== */}
 
             <Link
               href="/"
-              className="relative flex items-center flex-shrink-0"
+              className="flex items-center flex-shrink-0"
             >
               <motion.div
                 whileHover={{ scale: 1.03 }}
@@ -112,23 +96,20 @@ export default function Header() {
                   priority
                   className="
                     w-[90px]
-                    xs:w-[100px]
-                    sm:w-[115px]
-                    md:w-[125px]
+                    sm:w-[105px]
+                    md:w-[120px]
                     lg:w-[145px]
                     xl:w-[155px]
                     h-auto
                     object-contain
-                    transition-all
-                    duration-300
                   "
                 />
               </motion.div>
             </Link>
 
-            {/* ========================================= */}
+            {/* ===================================== */}
             {/* DESKTOP NAVIGATION */}
-            {/* ========================================= */}
+            {/* ===================================== */}
 
             <nav className="hidden lg:flex items-center gap-7 xl:gap-9">
               {navLinks.map((link) => {
@@ -141,12 +122,12 @@ export default function Header() {
                     className={`
                       relative
                       group
+                      text-[14px]
+                      xl:text-[15px]
                       font-medium
                       tracking-wide
                       transition-all
                       duration-300
-                      text-[14px]
-                      xl:text-[15px]
                       ${
                         isActive
                           ? "text-[#fed42a]"
@@ -179,9 +160,9 @@ export default function Header() {
               })}
             </nav>
 
-            {/* ========================================= */}
+            {/* ===================================== */}
             {/* DESKTOP BUTTON */}
-            {/* ========================================= */}
+            {/* ===================================== */}
 
             <div className="hidden lg:flex items-center">
               <Link
@@ -191,30 +172,27 @@ export default function Header() {
                   relative
                   overflow-hidden
                   rounded-full
+                  bg-[#fed42a]
                   px-5
                   xl:px-6
                   py-2.5
-                  bg-[#fed42a]
                   text-black
                   text-sm
                   font-semibold
                   transition-all
-                  duration-500
+                  duration-300
                   hover:scale-105
-                  shadow-[0_0_20px_rgba(254,212,42,0.20)]
                 "
               >
-                <span className="absolute inset-0 bg-white scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100" />
-
                 <span className="relative z-10">
                   Inquiry
                 </span>
               </Link>
             </div>
 
-            {/* ========================================= */}
+            {/* ===================================== */}
             {/* MOBILE MENU BUTTON */}
-            {/* ========================================= */}
+            {/* ===================================== */}
 
             <button
               onClick={() => setMenuOpen(!menuOpen)}
@@ -226,8 +204,8 @@ export default function Header() {
                 flex-col
                 justify-center
                 items-center
-                w-9
-                h-9
+                w-10
+                h-10
               "
               aria-label="Toggle Menu"
             >
@@ -236,7 +214,7 @@ export default function Header() {
               <span
                 className={`
                   absolute
-                  w-5
+                  w-6
                   h-[2px]
                   bg-[#fed42a]
                   transition-all
@@ -244,7 +222,7 @@ export default function Header() {
                   ${
                     menuOpen
                       ? "rotate-45"
-                      : "-translate-y-1.5"
+                      : "-translate-y-2"
                   }
                 `}
               />
@@ -254,7 +232,7 @@ export default function Header() {
               <span
                 className={`
                   absolute
-                  w-5
+                  w-6
                   h-[2px]
                   bg-[#fed42a]
                   transition-all
@@ -272,7 +250,7 @@ export default function Header() {
               <span
                 className={`
                   absolute
-                  w-5
+                  w-6
                   h-[2px]
                   bg-[#fed42a]
                   transition-all
@@ -280,7 +258,7 @@ export default function Header() {
                   ${
                     menuOpen
                       ? "-rotate-45"
-                      : "translate-y-1.5"
+                      : "translate-y-2"
                   }
                 `}
               />
@@ -288,57 +266,54 @@ export default function Header() {
           </div>
         </div>
 
-        {/* ========================================= */}
+        {/* ===================================== */}
         {/* MOBILE MENU */}
-        {/* ========================================= */}
+        {/* ===================================== */}
 
         <AnimatePresence>
           {menuOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
+              initial={{ opacity: 0, x: "100%" }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: "100%" }}
+              transition={{ duration: 0.35 }}
               className="
                 lg:hidden
                 fixed
-                top-[68px]
-                sm:top-[74px]
+                top-[70px]
+                sm:top-[78px]
                 left-0
                 w-full
-                h-[calc(100vh-68px)]
-                sm:h-[calc(100vh-74px)]
-                bg-black/95
-                backdrop-blur-2xl
+                h-[calc(100vh-70px)]
+                sm:h-[calc(100vh-78px)]
+                bg-black
                 border-t
                 border-white/10
                 overflow-y-auto
               "
             >
               <div className="flex flex-col px-6 sm:px-8 py-10">
+                {/* MOBILE LINKS */}
 
-                {/* MOBILE NAV LINKS */}
-
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-7">
                   {navLinks.map((link, index) => {
                     const isActive = pathname === link.href;
 
                     return (
                       <motion.div
                         key={link.name}
-                        initial={{ opacity: 0, x: -25 }}
+                        initial={{ opacity: 0, x: 30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{
-                          delay: index * 0.07,
-                          duration: 0.35,
+                          delay: index * 0.08,
                         }}
                       >
                         <Link
                           href={link.href}
                           onClick={() => setMenuOpen(false)}
                           className={`
-                            text-[17px]
-                            sm:text-[18px]
+                            text-[18px]
+                            sm:text-[20px]
                             font-semibold
                             tracking-wide
                             transition-all
@@ -363,8 +338,7 @@ export default function Header() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
-                    delay: 0.35,
-                    duration: 0.35,
+                    delay: 0.3,
                   }}
                   className="mt-10"
                 >
@@ -385,23 +359,34 @@ export default function Header() {
                       transition-all
                       duration-300
                       hover:scale-105
-                      shadow-[0_0_30px_rgba(254,212,42,0.25)]
                     "
                   >
                     Inquiry
                   </Link>
                 </motion.div>
 
-                {/* GLOW EFFECT */}
+                {/* BOTTOM GLOW */}
 
                 <div className="mt-16 flex justify-center">
-                  <div className="w-40 h-40 bg-[#fed42a]/10 blur-3xl rounded-full" />
+                  <div
+                    className="
+                      w-44
+                      h-44
+                      rounded-full
+                      bg-[#fed42a]/10
+                      blur-3xl
+                    "
+                  />
                 </div>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
       </header>
+
+      {/* HEADER SPACING */}
+
+      <div className="h-[70px] sm:h-[78px] lg:h-[88px]" />
     </>
   );
 }

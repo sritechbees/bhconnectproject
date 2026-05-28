@@ -25,7 +25,7 @@ export default function AboutPage() {
         {/* HERO SECTION */}
         {/* ====================================================== */}
 
-        <section className="relative min-h-[90vh] flex items-center justify-center text-center px-4 sm:px-6 overflow-hidden bg-black mt-16">
+        <section className="relative min-h-[90vh] flex items-center justify-center text-center px-4 sm:px-6 overflow-hidden bg-black">
 
           {/* Background Image */}
 
@@ -34,16 +34,16 @@ export default function AboutPage() {
             alt="About BH Connected"
             fill
             priority
-            className="object-cover object-center opacity-90 scale-105"
+            className="object-fill object-center"
           />
 
           {/* Dark Overlay */}
 
-          <div className="absolute inset-0"></div>
+          {/* <div className="absolute inset-0"></div> */}
 
           {/* Gradient Overlay */}
 
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-black/40"></div>
 
           {/* HERO CONTENT */}
 

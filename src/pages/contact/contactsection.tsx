@@ -66,7 +66,7 @@ export default function ContactSection() {
         {/* HERO SECTION */}
         {/* ===================================================== */}
 
-        <section className="relative min-h-[90vh] flex items-center justify-center text-center px-6 overflow-hidden mt-16">
+        <section className="relative min-h-[90vh] flex items-center justify-center text-center px-6 overflow-hidden">
 
           {/* Background Image */}
           <Image
@@ -74,14 +74,12 @@ export default function ContactSection() {
             alt="Contact Hero"
             fill
             priority
-            className="object-cover opacity-70"
+            className=""
           />
 
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black/20"></div>
 
           {/* Gold Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-[#fed42a]/10 to-black"></div>
+          {/* <div className="absolute inset-0 bg-gradient-to-r from-black via-[#fed42a]/10 to-black"></div> */}
 
           {/* Glow Effects */}
           <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-[#fed42a]/10 blur-[140px] rounded-full"></div>

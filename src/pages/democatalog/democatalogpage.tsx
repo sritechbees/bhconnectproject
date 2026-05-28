@@ -18,15 +18,15 @@ export default function DemoCatalogPage() {
     {
       title: "TMS Therapy Demo",
       desc: "Advanced Transcranial Magnetic Stimulation technology demonstration.",
-      thumbnail: "/home/tms image.jpeg",
+      thumbnail: "/tms product/videoimage.jpg",
       video: "/videos/tmsfull.mp4",
     },
 
     {
       title: "PMS Therapy Demo",
       desc: "Premium electromagnetic stimulation system demonstration.",
-      thumbnail: "/home/pms image.jpeg",
-      video: "/videos/painmanagementfull.mp4",
+      thumbnail: "/tms product/videoimage.jpg",
+      video: "/videos/pmsnew_version.mp4",
     },
   ];
 
@@ -40,36 +40,13 @@ export default function DemoCatalogPage() {
         {/* HEADER SECTION */}
         {/* ===================================================== */}
 
-        <section className="relative min-h-[90vh] flex items-center justify-center text-center mt-16 px-6 overflow-hidden">
+        <section className="relative min-h-[90vh] flex items-center justify-center text-center px-6 overflow-hidden">
 
   {/* ===================================================== */}
-  {/* Background Video */}
-  {/* ===================================================== */}
-
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    preload="auto"
-    className="absolute inset-0 w-full h-full object-cover"
-  >
-    <source src="/videos/fullvideo.mp4" type="video/mp4" />
-  </video>
+ 
 
   {/* ===================================================== */}
-  {/* Dark Overlay */}
-  {/* ===================================================== */}
-
-  <div className="absolute inset-0 bg-black/60"></div>
-
-  {/* ===================================================== */}
-  {/* Gold Gradient Overlay */}
-  {/* ===================================================== */}
-
-  <div className="absolute inset-0 bg-gradient-to-r from-black via-[#fed42a]/10 to-black"></div>
-
-  {/* ===================================================== */}
+  
   {/* Glow Effects */}
   {/* ===================================================== */}
 
@@ -227,7 +204,7 @@ export default function DemoCatalogPage() {
                       />
 
                       {/* Overlay */}
-                      <div className="absolute inset-0 bg-black/40"></div>
+                      {/* <div className="absolute inset-0 bg-black/40"></div> */}
 
                       {/* Play Button */}
                       <div className="absolute inset-0 flex items-center justify-center">

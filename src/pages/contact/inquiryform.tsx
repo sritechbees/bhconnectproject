@@ -29,12 +29,12 @@ export default function InquiryForm() {
               alt="Inquiry Banner"
               fill
               priority
-              className="object-cover scale-105"
+              className="object-cover"
             />
           </div>
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black/75"></div>
+          <div className="absolute inset-0 bg-black/20"></div>
 
           {/* Gold Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-black via-[#fed42a]/10 to-black"></div>

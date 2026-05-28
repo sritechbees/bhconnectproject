@@ -72,16 +72,16 @@ export default function ProductsPage() {
         {/* PAGE HEADER */}
         {/* ===================================================== */}
 
-        <section className="relative min-h-[90vh] mt-16 flex items-center justify-center text-center overflow-hidden px-4 sm:px-6">
+        <section className="relative min-h-[90vh] flex items-center justify-center text-center overflow-hidden px-4 sm:px-6">
 
           {/* Background Image */}
 
           <Image
-            src="/home/products.jpg"
+            src="/tms product/Product Banner.jpg"
             alt="Products"
             fill
             priority
-            className="object-cover object-center opacity-90"
+            className="object-cover object-center"
           />
 
           {/* Overlay */}

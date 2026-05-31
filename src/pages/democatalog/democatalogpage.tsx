@@ -54,16 +54,7 @@ export default function DemoCatalogPage() {
 
   <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-yellow-500/10 blur-[140px] rounded-full"></div>
 
-  {/* ===================================================== */}
-  {/* Floating Circle */}
-  {/* ===================================================== */}
-
-  <div className="hidden md:block absolute top-24 right-20 w-40 h-40 border border-[#fed42a]/20 rounded-full backdrop-blur-sm animate-pulse"></div>
-
-  {/* ===================================================== */}
-  {/* Content */}
-  {/* ===================================================== */}
-
+  
   <div
     className="relative z-10 max-w-4xl mx-auto"
     data-aos="fade-up"

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import App_layout from "@/layout/app_layout";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function AboutPage() {
   const missionRef = useRef<HTMLDivElement | null>(null);
@@ -44,18 +44,14 @@ export default function AboutPage() {
           {/* IMAGE SECTION */}
 
           <div className="relative w-full h-[340px] overflow-hidden">
-            {/* <AnimatePresence mode="wait"> */}
-             
-                <Image
-                  src={heroImages[currentImage]}
-                  alt="About Hero Mobile"
-                  fill
-                  priority
-                  className="object-cover object-center  max-sm:mt-8"
-                />
-           
+            <Image
+              src={heroImages[currentImage]}
+              alt="About Hero Mobile"
+              fill
+              priority
+              className="object-cover object-center max-sm:mt-8"
+            />
 
-         
             {/* BOTTOM GRADIENT */}
 
             <div className="absolute bottom-0 left-0 w-full h-28 bg-gradient-to-t from-black to-transparent z-[2]" />
@@ -88,9 +84,9 @@ export default function AboutPage() {
                 py-2
                 rounded-full
                 border
-                border-[#fed42a]/40
+                border-[#FFE992]/40
                 bg-[#111111]
-                text-[#fed42a]
+                text-[#FFE992]
                 text-[10px]
                 uppercase
                 tracking-[2px]
@@ -116,7 +112,7 @@ export default function AboutPage() {
 
               <br />
 
-              <span className="text-[#fed42a]">
+              <span className="text-[#FFE992]">
                 Beauty & Health
               </span>
             </motion.h1>
@@ -156,13 +152,17 @@ export default function AboutPage() {
                   px-7
                   py-3
                   rounded-full
-                  bg-[#fed42a]
+                  bg-gradient-to-r
+                  from-[#C8960C]
+                  to-[#FFE992]
                   text-black
                   font-semibold
                   text-[13px]
+                  shadow-[0_0_25px_rgba(255,233,146,0.35)]
                   transition-all
                   duration-300
                   hover:scale-105
+                  hover:shadow-[0_0_35px_rgba(255,233,146,0.55)]
                 "
               >
                 Explore More
@@ -177,7 +177,7 @@ export default function AboutPage() {
                   key={index}
                   className={`transition-all duration-500 rounded-full ${
                     currentImage === index
-                      ? "w-6 h-2 bg-[#fed42a]"
+                      ? "w-6 h-2 bg-[#FFE992]"
                       : "w-2 h-2 bg-white/60"
                   }`}
                 />
@@ -201,14 +201,6 @@ export default function AboutPage() {
             className="object-fill object-center"
           />
 
-          {/* Overlay */}
-
-          {/* <div className="absolute inset-0 bg-black/10"></div> */}
-
-          {/* Gradient */}
-
-          {/* <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/60"></div> */}
-
           {/* HERO CONTENT */}
 
           <div
@@ -226,9 +218,9 @@ export default function AboutPage() {
                 py-2
                 rounded-full
                 border
-                border-[#fed42a]/30
-                bg-[#fed42a]/10
-                text-[#fed42a]
+                border-[#FFE992]/30
+                bg-[#FFE992]/10
+                text-[#FFE992]
                 text-sm
                 tracking-[3px]
                 uppercase
@@ -243,7 +235,7 @@ export default function AboutPage() {
 
             <h1 className="font-bold leading-tight text-5xl lg:text-6xl">
               About{" "}
-              <span className="text-[#fed42a]">
+              <span className="text-[#FFE992]">
                 BH Connected
               </span>
             </h1>
@@ -268,38 +260,33 @@ export default function AboutPage() {
                   px-10
                   py-4
                   rounded-full
-                  border
-                  border-[#fed42a]/40
-                  bg-[#fed42a]/10
-                  backdrop-blur-md
-                  text-white
-                  font-medium
+                  bg-gradient-to-r
+                  from-[#C8960C]
+                  to-[#FFE992]
+                  text-black
+                  font-semibold
                   transition-all
                   duration-500
                   hover:scale-105
+                  shadow-[0_0_30px_rgba(255,233,146,0.25)]
+                  hover:shadow-[0_0_45px_rgba(255,233,146,0.45)]
                 "
               >
                 <span
                   className="
                     absolute
                     inset-0
-                    bg-[#fed42a]
-                    translate-y-full
-                    group-hover:translate-y-0
-                    transition-transform
+                    bg-gradient-to-r
+                    from-[#FFE992]
+                    to-[#C8960C]
+                    opacity-0
+                    group-hover:opacity-100
+                    transition-all
                     duration-500
                   "
                 ></span>
 
-                <span
-                  className="
-                    relative
-                    z-10
-                    group-hover:text-black
-                    transition
-                    duration-500
-                  "
-                >
+                <span className="relative z-10">
                   Explore More
                 </span>
               </button>
@@ -333,7 +320,7 @@ export default function AboutPage() {
                   md:text-4xl
                   lg:text-5xl
                   font-bold
-                  text-[#fed42a]
+                  text-[#FFE992]
                   mb-4
                   sm:mb-6
                   leading-tight
@@ -368,17 +355,18 @@ export default function AboutPage() {
                     py-2.5
                     sm:py-3
                     rounded-full
-                    border
-                    border-[#fed42a]
-                    text-[#fed42a]
+                    bg-gradient-to-r
+                    from-[#C8960C]
+                    to-[#FFE992]
+                    text-black
                     text-sm
                     sm:text-base
-                    font-medium
-                    hover:bg-[#fed42a]
-                    hover:text-black
+                    font-semibold
                     transition-all
                     duration-300
                     hover:scale-105
+                    shadow-[0_0_25px_rgba(255,233,146,0.25)]
+                    hover:shadow-[0_0_35px_rgba(255,233,146,0.45)]
                   "
                 >
                   Learn More
@@ -422,7 +410,7 @@ export default function AboutPage() {
                   sm:text-3xl
                   md:text-4xl
                   font-semibold
-                  text-[#fed42a]
+                  text-[#FFE992]
                   mb-5
                 "
               >
@@ -472,7 +460,7 @@ export default function AboutPage() {
                 sm:text-3xl
                 md:text-4xl
                 font-semibold
-                text-[#fed42a]
+                text-[#FFE992]
                 mb-6
               "
             >
@@ -510,16 +498,16 @@ export default function AboutPage() {
                 p-6
                 sm:p-8
                 border
-                border-yellow-500/20
+                border-[#FFE992]/20
                 rounded-2xl
                 bg-[#111111]
                 group
               "
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#fed42a]/0 via-[#fed42a]/10 to-[#fed42a]/20 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#C8960C]/0 via-[#C8960C]/10 to-[#FFE992]/20 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700"></div>
 
               <div className="relative z-10">
-                <h3 className="text-2xl text-yellow-400 mb-4">
+                <h3 className="text-2xl text-[#FFE992] mb-4">
                   Our Purpose
                 </h3>
 
@@ -542,16 +530,16 @@ export default function AboutPage() {
                 p-6
                 sm:p-8
                 border
-                border-yellow-500/20
+                border-[#FFE992]/20
                 rounded-2xl
                 bg-[#111111]
                 group
               "
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#fed42a]/0 via-[#fed42a]/10 to-[#fed42a]/20 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#C8960C]/0 via-[#C8960C]/10 to-[#FFE992]/20 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700"></div>
 
               <div className="relative z-10">
-                <h3 className="text-2xl text-yellow-400 mb-4">
+                <h3 className="text-2xl text-[#FFE992] mb-4">
                   Technology for People
                 </h3>
 
@@ -591,13 +579,17 @@ export default function AboutPage() {
                 className="
                   px-8
                   py-3
-                  bg-yellow-400
-                  text-black
-                  font-medium
-                  hover:bg-yellow-300
-                  transition
                   rounded-full
+                  bg-gradient-to-r
+                  from-[#C8960C]
+                  to-[#FFE992]
+                  text-black
+                  font-semibold
+                  transition-all
+                  duration-300
                   hover:scale-105
+                  shadow-[0_0_25px_rgba(255,233,146,0.25)]
+                  hover:shadow-[0_0_40px_rgba(255,233,146,0.45)]
                 "
               >
                 Contact Us

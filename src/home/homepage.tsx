@@ -48,7 +48,7 @@ export default function HomePage() {
 
           {/* IMAGE SLIDER */}
 
-          <div className="absolute inset-0 w-full h-full  mt-4 overflow-hidden">
+          <div className="absolute inset-0 w-full h-full  mt-8 overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentImage}
@@ -158,67 +158,39 @@ export default function HomePage() {
 
             {/* BUTTONS */}
 
-            <motion.div
-              initial={{ opacity: 0, y: 25 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="
-                mt-8
-                flex
-                items-center
-                justify-center
-                gap-4
-              "
-            >
-              {/* BUTTON 1 */}
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5">
 
-              <Link href="/products/productpage">
-                <button
-                  className="
-                    min-w-[190px]
-                    px-7
-                    py-3
-                    rounded-full
-                    bg-[#fed42a]
-                    text-black
-                    font-semibold
-                    text-sm
-                    hover:scale-105
-                    hover:bg-yellow-300
-                    transition-all
-                    duration-300
-                  "
-                >
-                  Explore Products
-                </button>
-              </Link>
+  {/* Explore Products Button */}
+  <Link href="/products/productpage">
+    <button
+      className="group relative overflow-hidden px-8 py-4 rounded-full border border-[#fed42a]/40 bg-[#fed42a] text-black font-semibold transition-all duration-500 hover:scale-105"
+    >
+      {/* Overlay */}
+      <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500"></span>
 
-              {/* BUTTON 2 */}
+      {/* Text */}
+      <span className="relative z-10 transition duration-500 group-hover:text-[#fed42a]">
+        Explore Products
+      </span>
+    </button>
+  </Link>
 
-              <Link href="/contact/contactsection">
-                <button
-                  className="
-                    min-w-[190px]
-                    px-7
-                    py-3
-                    rounded-full
-                    border
-                    border-white/40
-                    bg-black/30
-                    backdrop-blur-sm
-                    text-white
-                    font-medium
-                    text-sm
-                    hover:border-[#fed42a]
-                    hover:text-[#fed42a]
-                    transition-all
-                    duration-300
-                  "
-                >
-                  Contact Us
-                </button>
-              </Link>
-            </motion.div>
+  {/* Contact Us Button */}
+  <Link href="/contact/contactsection">
+    <button
+      className="group relative overflow-hidden px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white font-medium transition-all duration-500 hover:scale-105"
+    >
+      {/* Overlay */}
+      <span className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500"></span>
+
+      {/* Text */}
+      <span className="relative z-10 transition duration-500 group-hover:text-black">
+        Contact Us
+      </span>
+    </button>
+  </Link>
+
+</div>
           </div>
 
           {/* DOTS */}
@@ -260,7 +232,7 @@ export default function HomePage() {
                   alt="Hero Mobile"
                   fill
                   priority
-                  className="object-cover max-sm:mt-8 object-center"
+                  className="object-cover max-sm:mt-16 object-center"
                 />
               </motion.div>
             </AnimatePresence>
@@ -371,7 +343,7 @@ export default function HomePage() {
                   className="
                     px-6
                     py-2.5
-                    rounded-full
+                    rounded-full  
                     bg-[#fed42a]
                     text-black
                     font-semibold
@@ -552,7 +524,7 @@ export default function HomePage() {
 
               <div className="relative h-[240px] sm:h-[300px] overflow-hidden">
                 <Image
-                  src="/home/pms.jpeg"
+                  src="/home/pmsimage.jpg"
                   alt="PMS"
                   fill
                   className="

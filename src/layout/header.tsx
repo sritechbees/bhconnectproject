@@ -57,7 +57,7 @@ export default function Header() {
           left-0
           w-full
           z-50
-          h-[105px]
+          h-[120px]
           py-2
           bg-black
           border-b
@@ -89,19 +89,19 @@ export default function Header() {
                 transition={{ duration: 0.3 }}
               >
                 <Image
-                  src="/home/BH logo4.png"
+                  src="/home/bhlogo1.png"
                   alt="BH Connected"
                   width={160}
                   height={60}
                   priority
                   className="
                     w-[90px]
-                    sm:w-[105px]
-                    md:w-[120px]
-                    lg:w-[145px]
-                    xl:w-[155px]
+                    sm:w-[95px]
+                    md:w-[110px]
+                    lg:w-[135px]
+                    xl:w-[145px]
                     h-auto
-                    object-contain
+                    object-contain mt-4
                   "
                 />
               </motion.div>
@@ -111,7 +111,7 @@ export default function Header() {
             {/* DESKTOP NAVIGATION */}
             {/* ===================================== */}
 
-            <nav className="hidden lg:flex items-center gap-7 xl:gap-9">
+            <nav className="hidden lg:flex items-center gap-7 mt-4 xl:gap-9">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
 
@@ -127,7 +127,8 @@ export default function Header() {
                       font-medium
                       tracking-wide
                       transition-all
-                      duration-300
+                      duration-300 
+                    
                       ${
                         isActive
                           ? "text-[#fed42a]"
@@ -164,32 +165,19 @@ export default function Header() {
             {/* DESKTOP BUTTON */}
             {/* ===================================== */}
 
-            <div className="hidden lg:flex items-center">
-              <Link
-                href="/contact/inquiryform"
-                className="
-                  group
-                  relative
-                  overflow-hidden
-                  rounded-full
-                  bg-[#fed42a]
-                  px-5
-                  xl:px-6
-                  py-2.5
-                  text-black
-                  text-sm
-                  font-semibold
-                  transition-all
-                  duration-300
-                  hover:scale-105
-                "
-              >
-                <span className="relative z-10">
-                  Inquiry
-                </span>
-              </Link>
-            </div>
+            
+            <Link href="/contact/inquiryform">
+<button
+      className="group relative overflow-hidden max-sm:hidden px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white font-medium transition-all duration-500 hover:scale-105"
+    >
+      {/* Overlay */}
+      <span className="absolute inset-0 bg-[#fed42a] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></span>
 
+      {/* Text */}
+      <span className="relative z-10 transition duration-500 group-hover:text-black">
+        Inquiry
+      </span>
+    </button></Link>
             {/* ===================================== */}
             {/* MOBILE MENU BUTTON */}
             {/* ===================================== */}
@@ -280,7 +268,7 @@ export default function Header() {
               className="
                 lg:hidden
                 fixed
-                top-[70px]
+                top-[100px]
                 sm:top-[78px]
                 left-0
                 w-full
@@ -292,7 +280,7 @@ export default function Header() {
                 overflow-y-auto
               "
             >
-              <div className="flex flex-col px-6 sm:px-8 py-10">
+              <div className="flex flex-col px-6 sm:px-8 py-4">
                 {/* MOBILE LINKS */}
 
                 <div className="flex flex-col gap-7">
@@ -340,7 +328,7 @@ export default function Header() {
                   transition={{
                     delay: 0.3,
                   }}
-                  className="mt-10"
+                  className="mt-8"
                 >
                   <Link
                     href="/contact/inquiryform"

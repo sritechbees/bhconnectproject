@@ -8,6 +8,8 @@ import { motion } from "framer-motion";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Downloadcatalog from "../democatalog/downloadcatalog";
+import Downloadcatalogeflyer from "./downloadcatalogeflyer";
 
 const products = [
   {
@@ -29,7 +31,7 @@ const products = [
 
   {
     name: "PMS",
-    image: "/home/pms.jpeg",
+    image: "/home/pmsimage.jpg",
     title: "Pain Management Solution",
     subtitle: "Comprehensive Pain Treatment Solution",
     description:
@@ -72,13 +74,13 @@ export default function ProductsPage() {
         <section className="md:hidden relative w-full bg-black overflow-hidden">
           {/* IMAGE SECTION */}
 
-          <div className="relative w-full h-[340px] overflow-hidden">
+          <div className="relative w-[350px] h-[340px] overflow-hidden">
             <Image
-              src="/tms product/Product Banner.jpg"
+              src="/tms product/Product Mobile.jpg"
               alt="Products"
               fill
               priority
-              className="object-cover object-center max-sm:mt-8 "
+              className="object-cover object-center max-sm:mt-12 "
             />
 
             {/* OVERLAY */}
@@ -87,7 +89,7 @@ export default function ProductsPage() {
 
             {/* BOTTOM FADE */}
 
-            <div className="absolute bottom-0 left-0 w-full h-28 bg-gradient-to-t from-black to-transparent z-[2]" />
+            <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black to-transparent z-[2]" />
           </div>
 
           {/* CONTENT BELOW IMAGE */}
@@ -240,16 +242,16 @@ export default function ProductsPage() {
           {/* Background Image */}
 
           <Image
-            src="/tms product/Product Banner.jpg"
+            src="/tms product/Product Banner1.jpg"
             alt="Products"
             fill
             priority
-            className="object-fill object-center "
+            className="object-fill object-center mt-4 "
           />
 
           {/* Overlay */}
 
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-black/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/20 to-black/20"></div>
 
           {/* Content */}
 
@@ -283,7 +285,7 @@ export default function ProductsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9 }}
               className="
-                text-gray-300
+                text-white
                 mt-5
                 text-lg
                 leading-relaxed
@@ -296,57 +298,51 @@ export default function ProductsPage() {
               experiences.
             </motion.p>
 
+
+
+
+
+            
+
             {/* Buttons */}
 
-            <div className="mt-8 flex items-center justify-center gap-4">
-              <Link href="/democatalog/gallerypage">
-                <button
-                  className="
-                    min-w-[220px]
-                    px-8
-                    py-3.5
-                    rounded-full
-                    bg-[#fed42a]
-                    text-black
-                    font-semibold
-                    hover:bg-yellow-300
-                    hover:scale-105
-                    transition-all
-                    duration-300
-                  "
-                >
-                  Explore Gallery
-                </button>
-              </Link>
+           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5">
 
-              <Link href="/contact/contactsection">
-                <button
-                  className="
-                    min-w-[220px]
-                    px-8
-                    py-3.5
-                    rounded-full
-                    border
-                    border-white/20
-                    bg-white/5
-                    backdrop-blur-md
-                    text-white
-                    hover:border-[#fed42a]
-                    hover:text-[#fed42a]
-                    hover:scale-105
-                    transition-all
-                    duration-300
-                  "
-                >
-                  Contact Us
-                </button>
-              </Link>
-            </div>
-          </div>
+      {/* Watch Demo Button */}
+      <Link href="/democatalog/gallerypage">
+      <button
+      className="group relative overflow-hidden px-8 py-4 rounded-full border border-[#fed42a]/40 bg-[#fed42a] text-black font-semibold transition-all duration-500 hover:scale-105"
+    >
+      {/* Overlay */}
+      <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500"></span>
+
+      {/* Text */}
+      <span className="relative z-10 transition duration-500 group-hover:text-[#fed42a]">
+        Explore Gallery
+      </span>
+    </button>
+      </Link>
+
+      {/* Download Catalog Button */}
+      <Link href="/contact/contactsection">
+       <button
+      className="group relative overflow-hidden px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white font-medium transition-all duration-500 hover:scale-105"
+    >
+      {/* Overlay */}
+      <span className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500"></span>
+
+      {/* Text */}
+      <span className="relative z-10 transition duration-500 group-hover:text-black">
+        Contact Us
+      </span>
+    </button>
+      </Link>
+
+    </div>          </div>
 
           {/* Bottom Fade */}
 
-          <div className="absolute bottom-0 left-0 w-full h-24 sm:h-32 bg-gradient-to-t from-black to-transparent"></div>
+          <div className="absolute bottom-0 left-0 w-full h-20 sm:h-32 bg-gradient-to-t from-black to-transparent"></div>
         </section>
 
         {/* ===================================================== */}
@@ -488,12 +484,12 @@ export default function ProductsPage() {
                         sm:text-base
                         transition-all
                         duration-500
-                        hover:scale-105
+                        hover:scale-105 max-sm:w-12
                       "
                     >
                       <span className="absolute inset-0 bg-[#fed42a] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></span>
 
-                      <span className="relative z-10 group-hover:text-black transition duration-500">
+                      <span className="relative z-10  group-hover:text-black transition duration-500">
                         Learn More
                       </span>
                     </button>
@@ -602,7 +598,7 @@ export default function ProductsPage() {
                     hover:bg-yellow-300
                     hover:scale-105
                     transition-all
-                    duration-300
+                    duration-300 max-sm:w-12
                   "
                 >
                   Contact Us
@@ -610,7 +606,7 @@ export default function ProductsPage() {
               </Link>
 
               <Link
-                href="/democatalog/downloadbrochures"
+                href="/products/downloadcatalogeflyer"
                 className="w-full sm:w-auto"
               >
                 <button
@@ -632,7 +628,7 @@ export default function ProductsPage() {
                     hover:text-[#fed42a]
                     hover:scale-105
                     transition-all
-                    duration-300
+                    duration-300 max-sm:w-12
                   "
                 >
                   Download Brochure

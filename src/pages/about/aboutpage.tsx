@@ -49,7 +49,7 @@ export default function AboutPage() {
               alt="About Hero Mobile"
               fill
               priority
-              className="object-cover object-center max-sm:mt-8"
+              className="object-cover object-center max-sm:mt-12"
             />
 
             {/* BOTTOM GRADIENT */}
@@ -84,9 +84,9 @@ export default function AboutPage() {
                 py-2
                 rounded-full
                 border
-                border-[#FFE992]/40
+                border-[#fed42a]/40
                 bg-[#111111]
-                text-[#FFE992]
+                text-[#fed42a]
                 text-[10px]
                 uppercase
                 tracking-[2px]
@@ -112,7 +112,7 @@ export default function AboutPage() {
 
               <br />
 
-              <span className="text-[#FFE992]">
+              <span className="text-[#fed42a]">
                 Beauty & Health
               </span>
             </motion.h1>
@@ -154,7 +154,7 @@ export default function AboutPage() {
                   rounded-full
                   bg-gradient-to-r
                   from-[#C8960C]
-                  to-[#FFE992]
+                  to-[#fed42a]
                   text-black
                   font-semibold
                   text-[13px]
@@ -177,7 +177,7 @@ export default function AboutPage() {
                   key={index}
                   className={`transition-all duration-500 rounded-full ${
                     currentImage === index
-                      ? "w-6 h-2 bg-[#FFE992]"
+                      ? "w-6 h-2 bg-[#fed42a]"
                       : "w-2 h-2 bg-white/60"
                   }`}
                 />
@@ -198,7 +198,7 @@ export default function AboutPage() {
             alt="About BH Connected"
             fill
             priority
-            className="object-fill object-center"
+            className="object-fill object-center mt-4"
           />
 
           {/* HERO CONTENT */}
@@ -218,9 +218,9 @@ export default function AboutPage() {
                 py-2
                 rounded-full
                 border
-                border-[#FFE992]/30
-                bg-[#FFE992]/10
-                text-[#FFE992]
+                border-[#fed42a]/30
+                bg-[#fed42a]/10
+                text-[#fed42a]
                 text-sm
                 tracking-[3px]
                 uppercase
@@ -235,7 +235,7 @@ export default function AboutPage() {
 
             <h1 className="font-bold leading-tight text-5xl lg:text-6xl">
               About{" "}
-              <span className="text-[#FFE992]">
+              <span className="text-[#fed42a]">
                 BH Connected
               </span>
             </h1>
@@ -250,47 +250,35 @@ export default function AboutPage() {
             {/* BUTTON */}
 
             <div className="mt-10 flex items-center justify-center">
-              <button
-                onClick={scrollToMission}
-                className="
-                  group
-                  relative
-                  overflow-hidden
-                  min-w-[220px]
-                  px-10
-                  py-4
-                  rounded-full
-                  bg-gradient-to-r
-                  from-[#C8960C]
-                  to-[#FFE992]
-                  text-black
-                  font-semibold
-                  transition-all
-                  duration-500
-                  hover:scale-105
-                  shadow-[0_0_30px_rgba(255,233,146,0.25)]
-                  hover:shadow-[0_0_45px_rgba(255,233,146,0.45)]
-                "
-              >
-                <span
-                  className="
-                    absolute
-                    inset-0
-                    bg-gradient-to-r
-                    from-[#FFE992]
-                    to-[#C8960C]
-                    opacity-0
-                    group-hover:opacity-100
-                    transition-all
-                    duration-500
-                  "
-                ></span>
+  <button
+    onClick={scrollToMission}
+    className="
+      group
+      relative
+      overflow-hidden
+      min-w-[220px]
+      px-10
+      py-4
+      rounded-full
+      border
+      border-white/20
+      bg-white/5
+      backdrop-blur-md
+      text-white
+      font-medium
+      transition-all
+      duration-500
+      hover:scale-105
+      hover:border-[#fed42a]
+    "
+  >
+    <span className="absolute inset-0 bg-[#fed42a] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></span>
 
-                <span className="relative z-10">
-                  Explore More
-                </span>
-              </button>
-            </div>
+    <span className="relative z-10 transition duration-500 group-hover:text-black">
+      Explore More
+    </span>
+  </button>
+</div>
           </div>
 
           {/* Bottom Fade */}
@@ -307,7 +295,7 @@ export default function AboutPage() {
 
           <div
             ref={missionRef}
-            className="w-full flex items-center justify-center py-10 sm:py-16"
+            className="w-full flex items-center justify-center sm:py-16"
           >
             <div
               data-aos="fade-up"
@@ -320,7 +308,7 @@ export default function AboutPage() {
                   md:text-4xl
                   lg:text-5xl
                   font-bold
-                  text-[#FFE992]
+                  text-[#fed42a]
                   mb-4
                   sm:mb-6
                   leading-tight
@@ -357,7 +345,7 @@ export default function AboutPage() {
                     rounded-full
                     bg-gradient-to-r
                     from-[#C8960C]
-                    to-[#FFE992]
+                    to-[#fed42a]
                     text-black
                     text-sm
                     sm:text-base
@@ -410,7 +398,7 @@ export default function AboutPage() {
                   sm:text-3xl
                   md:text-4xl
                   font-semibold
-                  text-[#FFE992]
+                  text-[#fed42a]
                   mb-5
                 "
               >
@@ -460,7 +448,7 @@ export default function AboutPage() {
                 sm:text-3xl
                 md:text-4xl
                 font-semibold
-                text-[#FFE992]
+                text-[#fed42a]
                 mb-6
               "
             >
@@ -498,16 +486,16 @@ export default function AboutPage() {
                 p-6
                 sm:p-8
                 border
-                border-[#FFE992]/20
+                border-[#fed42a]/20
                 rounded-2xl
                 bg-[#111111]
                 group
               "
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#C8960C]/0 via-[#C8960C]/10 to-[#FFE992]/20 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#C8960C]/0 via-[#C8960C]/10 to-[#fed42a]/20 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700"></div>
 
               <div className="relative z-10">
-                <h3 className="text-2xl text-[#FFE992] mb-4">
+                <h3 className="text-2xl text-[#fed42a] mb-4">
                   Our Purpose
                 </h3>
 
@@ -530,16 +518,16 @@ export default function AboutPage() {
                 p-6
                 sm:p-8
                 border
-                border-[#FFE992]/20
+                border-[#fed42a]/20
                 rounded-2xl
                 bg-[#111111]
                 group
               "
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#C8960C]/0 via-[#C8960C]/10 to-[#FFE992]/20 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#C8960C]/0 via-[#C8960C]/10 to-[#fed42a]/20 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700"></div>
 
               <div className="relative z-10">
-                <h3 className="text-2xl text-[#FFE992] mb-4">
+                <h3 className="text-2xl text-[#fed42a] mb-4">
                   Technology for People
                 </h3>
 
@@ -582,7 +570,7 @@ export default function AboutPage() {
                   rounded-full
                   bg-gradient-to-r
                   from-[#C8960C]
-                  to-[#FFE992]
+                  to-[#fed42a]
                   text-black
                   font-semibold
                   transition-all

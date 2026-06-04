@@ -53,7 +53,7 @@ const galleryImages = [
   "/home/tms treatment-3.jpg",
   "/home/brainstim.jpg",
   "/home/brain eyes.png",
-  "/home/pms.jpeg",
+  "/home/pmsimage.jpg",
 ];
 
 export default function ProductsPage() {

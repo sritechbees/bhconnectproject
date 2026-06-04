@@ -64,6 +64,7 @@ export default function ContactSection() {
         {/* ===================================================== */}
 
         <section className="md:hidden relative w-full bg-black overflow-hidden">
+          
           {/* IMAGE SECTION */}
 
           <div className="relative w-full h-[340px] overflow-hidden">
@@ -322,7 +323,8 @@ export default function ContactSection() {
 
         <section
           id="contact-form"
-          className="relative py-20 md:py-28 bg-[#111111] overflow-hidden"
+          className="relative py-20  md:py-28 bg-[#111111]  scroll-mt-16
+    md:scroll-mt-0 overflow-hidden"
         >
           {/* Background Glow */}
 
@@ -556,4 +558,4 @@ export default function ContactSection() {
       </div>
     </App_layout>
   );
-}
+}    

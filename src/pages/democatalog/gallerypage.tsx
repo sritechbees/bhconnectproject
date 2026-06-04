@@ -58,7 +58,7 @@ export default function GalleryPage() {
           <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-[#fed42a]/10 blur-[120px] rounded-full"></div>
 
           {/* Content */}
-          <div className="relative z-10 text-center mt-16 px-4 sm:px-6 max-w-5xl">
+          <div className="relative z-10 text-center max-sm:mt-16 px-4 sm:px-6 max-w-5xl">
 
             <span
               data-aos="fade-down"

@@ -78,24 +78,18 @@ export default function ProductsPage() {
         <section className="md:hidden relative w-full bg-black overflow-hidden">
           {/* IMAGE SECTION */}
 
-          <div className="relative w-[350px] h-[340px] overflow-hidden">
-            <Image
-              src="/tms product/Product Mobile.jpg"
-              alt="Products"
-              fill
-              priority
-              className="object-cover object-center max-sm:mt-12 "
-            />
+         <div className="relative w-full max-w-[350px] mx-auto h-[260px] sm:h-[300px] overflow-hidden">
+  <Image
+    src="/tms product/Product Mobile.jpg"
+    alt="Products"
+    fill
+    priority
+    className="object-cover object-center max-sm:mt-12"
+  />
 
-            {/* OVERLAY */}
-
-            {/* <div className="absolute inset-0 bg-black/40 z-[1]" /> */}
-
-            {/* BOTTOM FADE */}
-
-            <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black to-transparent z-[2]" />
-          </div>
-
+  {/* BOTTOM FADE */}
+  <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black to-transparent z-[2]" />
+</div>
           {/* CONTENT BELOW IMAGE */}
 
           <div

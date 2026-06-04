@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Head from "next/head";
+import Contactform from "../contact/contactform";
 
 export default function AboutPage() {
   const missionRef = useRef<HTMLDivElement | null>(null);
@@ -165,6 +166,7 @@ export default function AboutPage() {
                   shadow-[0_0_25px_rgba(255,233,146,0.35)]
                   transition-all
                   duration-300
+                    
                   hover:scale-105
                   hover:shadow-[0_0_35px_rgba(255,233,146,0.55)]
                 "
@@ -297,11 +299,22 @@ export default function AboutPage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-16 sm:py-20 space-y-20 sm:space-y-28 overflow-hidden">
           {/* OUR MISSION */}
 
-          <div
-            ref={missionRef}
-            className="w-full flex items-center justify-center sm:py-16"
-          >
-            <div
+         <div
+  ref={missionRef}
+  className="
+    w-full
+    flex
+    items-center
+    justify-center
+    py-8
+    sm:py-16
+    scroll-mt-32
+    sm:scroll-mt-36
+    md:scroll-mt-40
+    lg:scroll-mt-44
+  "
+>
+   <div
               data-aos="fade-up"
               className="w-full max-w-3xl text-center"
             >
@@ -590,6 +603,7 @@ export default function AboutPage() {
           </div>
         </section>
       </div>
+  
     </App_layout>
   );
 }

@@ -9,6 +9,7 @@ import {
   PlayCircle,
   Download,
 } from "lucide-react";
+import Head from "next/head";
 
 export default function DemoCatalogPage() {
 
@@ -33,6 +34,9 @@ export default function DemoCatalogPage() {
   return (
 
     <App_layout>
+      <Head>
+           <title>BH Connected | Product Demo & Catalog</title>
+      </Head>
 
       <div className="bg-black text-white overflow-hidden">
 

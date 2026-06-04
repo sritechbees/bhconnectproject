@@ -5,6 +5,7 @@ import App_layout from "@/layout/app_layout";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 export default function AboutPage() {
   const missionRef = useRef<HTMLDivElement | null>(null);
@@ -35,6 +36,9 @@ export default function AboutPage() {
 
   return (
     <App_layout>
+      <Head>
+        <title>BH Connected | About</title>
+      </Head>
       <div className="bg-black text-white overflow-hidden w-full">
         {/* ===================================================== */}
         {/* MOBILE VIEW */}

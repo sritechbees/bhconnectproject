@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import App_layout from "@/layout/app_layout";
+import Head from "next/head";
 
 export default function InquiryForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -14,6 +15,9 @@ export default function InquiryForm() {
 
   return (
     <App_layout>
+      <Head>
+           <title>BH Connected | Inquiryform</title>
+      </Head>
       <div className="bg-black text-white overflow-hidden">
 
         {/* ========================================= */}

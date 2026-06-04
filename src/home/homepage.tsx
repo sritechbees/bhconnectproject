@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Head from "next/head";
 
 export default function HomePage() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -33,6 +34,9 @@ export default function HomePage() {
   }, [heroImages.length]);
 
   return (
+    
+      
+    
     <div className="bg-black text-white overflow-hidden w-full">
       {/* ===================================================== */}
       {/* HERO SECTION */}

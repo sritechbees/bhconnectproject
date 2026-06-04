@@ -10,6 +10,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Downloadcatalog from "../democatalog/downloadcatalog";
 import Downloadcatalogeflyer from "./downloadcatalogeflyer";
+import Head from "next/head";
 
 const products = [
   {
@@ -66,6 +67,9 @@ export default function ProductsPage() {
 
   return (
     <App_layout>
+      <Head>
+        <title>BH Connected | Products</title>
+      </Head>
       <div className="bg-black text-white overflow-hidden w-full">
         {/* ===================================================== */}
         {/* MOBILE HERO SECTION */}

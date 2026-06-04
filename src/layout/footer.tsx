@@ -15,7 +15,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-[#0a0a0a] text-white overflow-hidden">
+    <footer className="bg-[#0a0a0a] text-white">
 
       {/* ========================================= */}
       {/* MAIN CONTAINER */}
@@ -213,46 +213,92 @@ export default function Footer() {
         {/* ========================================= */}
         {/* DIVIDER */}
         {/* ========================================= */}
+<div
+  data-aos="fade-up"
+  data-aos-delay="400"
+  className="mt-14 pt-8 border-t border-white/10 w-full"
+>
+  <div
+    className="
+      flex
+      flex-col
+      md:flex-row
+      items-center
+      justify-between
+      gap-6
+      w-full
+    "
+  >
+    {/* COPYRIGHT */}
 
-        <div
-          data-aos="fade-up"
-          data-aos-delay="400"
-          className="mt-14 pt-8 border-t border-white/10"
-        >
+    <div className="flex items-center justify-center md:justify-start gap-3">
+      <div className="w-2 h-2 rounded-full bg-[#fed42a] animate-pulse" />
 
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-5">
+      <p className="text-sm sm:text-[15px] text-gray-300 tracking-wide text-center md:text-left">
+        © BH Connected. All Rights Reserved.
+      </p>
+    </div>
 
-            {/* COPYRIGHT */}
+    {/* FOOTER LINKS */}
 
-            <div className="flex items-center gap-3 text-center lg:text-left">
+    <div
+      className="
+        flex
+        flex-wrap
+        justify-center
+        items-center
+        gap-4
+        sm:gap-6
+      "
+    >
+      <span
+        className="
+          relative
+          cursor-pointer
+          text-gray-400
+          hover:text-[#fed42a]
+          transition-all
+          duration-300
+          after:absolute
+          after:left-0
+          after:-bottom-1
+          after:h-[1px]
+          after:w-0
+          after:bg-[#fed42a]
+          hover:after:w-full
+          after:transition-all
+          after:duration-300
+        "
+      >
+        Privacy Policy
+      </span>
 
-              <div className="w-2 h-2 rounded-full bg-[#fed42a] animate-pulse"></div>
+      <div className="hidden md:block w-1 h-1 rounded-full bg-gray-600" />
 
-              <p className="text-sm sm:text-[15px] text-gray-300 tracking-wide">
-                © BH Connected. All Rights Reserved.
-              </p>
-
-            </div>
-
-            {/* FOOTER LINKS */}
-
-            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-sm sm:text-[15px]">
-
-              <span className="relative cursor-pointer text-gray-500 hover:text-[#fed42a] transition duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#fed42a] hover:after:w-full after:transition-all after:duration-300">
-                Privacy Policy
-              </span>
-
-              <div className="w-1 h-1 rounded-full bg-gray-600 hidden sm:block"></div>
-
-              <span className="relative cursor-pointer text-gray-500 hover:text-[#fed42a] transition duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#fed42a] hover:after:w-full after:transition-all after:duration-300">
-                Terms of Service
-              </span>
-
-            </div>
-
-          </div>
-
-        </div>
+      <span
+        className="
+          relative
+          cursor-pointer
+          text-gray-400
+          hover:text-[#fed42a]
+          transition-all
+          duration-300
+          after:absolute
+          after:left-0
+          after:-bottom-1
+          after:h-[1px]
+          after:w-0
+          after:bg-[#fed42a]
+          hover:after:w-full
+          after:transition-all
+          after:duration-300
+        "
+      >
+        Terms of Service
+      </span>
+    </div>
+  </div>
+</div>
 
       </div>
     </footer>

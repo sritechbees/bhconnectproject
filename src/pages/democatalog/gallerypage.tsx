@@ -37,10 +37,10 @@ export default function GalleryPage() {
           </div>
 
           {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black/65" />
+          {/* <div className="absolute inset-0 bg-black/65" /> */}
 
           {/* Content */}
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 text-center">
+          <div className="relative z-10 w-full max-sm:8 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 text-center">
 
             {/* Badge */}
             <span

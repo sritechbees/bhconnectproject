@@ -45,15 +45,15 @@ export default function DemoCatalogPage() {
               mx-auto
               rounded-[30px]
               md:rounded-[40px]
-              border border-white/10
+              
               bg-gradient-to-br
               from-[#111111]
               to-black
               px-6
               sm:px-10
               md:px-20
-              py-14
-              md:py-20
+              py-8
+              md:py-16
               text-center
             "
           >

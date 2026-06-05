@@ -215,6 +215,7 @@ export default function InquiryForm() {
           id="inquiry-form"
           className="
             relative
+            scroll-mt-24 md:scroll-mt-16
             w-full
             bg-gradient-to-b
             from-[#111111]

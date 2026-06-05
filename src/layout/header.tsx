@@ -60,7 +60,7 @@ export default function Header() {
           h-[120px]
           py-2
           bg-black
-          border-b
+      
         
           shadow-lg
         "
@@ -275,8 +275,7 @@ export default function Header() {
                 h-[calc(100vh-70px)]
                 sm:h-[calc(100vh-78px)]
                 bg-black
-                border-t
-                border-white/10
+                
                 overflow-y-auto
               "
             >

@@ -9,7 +9,7 @@ import {
   FileText,
   ShieldCheck,
 } from "lucide-react";
-import App_layout from "@/layout/app_layout";
+
 
 export default function Downloadcatalog() {
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function Downloadcatalog() {
 
   return (
   
-    <section className="relative bg-black py-24 mt-4 px-4 sm:px-6 overflow-hidden">
+    <section className="relative bg-black py-16 px-4 sm:px-6 overflow-hidden">
 
       {/* Background Glow */}
       <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-[#fed42a]/10 blur-[140px] rounded-full"></div>

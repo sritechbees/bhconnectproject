@@ -26,7 +26,7 @@ export default function ProductDemonstrations() {
   return (
     <div>
    
-  <section className="relative min-h-screen bg-black text-white overflow-hidden py-16 md:py-24">
+  <section className="relative min-h-screen bg-black text-white overflow-hidden py-16 md:py-16">
     
     {/* Glow Effects */}
     <div className="absolute top-20 left-0 w-[250px] h-[250px] bg-[#fed42a]/10 blur-[120px] rounded-full"></div>

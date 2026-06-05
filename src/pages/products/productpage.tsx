@@ -78,7 +78,7 @@ export default function ProductsPage() {
         <section className="md:hidden relative w-full bg-black overflow-hidden">
           {/* IMAGE SECTION */}
 
-         <div className="relative w-full max-w-[350px] mx-auto h-[260px] sm:h-[300px] overflow-hidden">
+         <div className="relative w-full mx-auto h-[280px] sm:h-[300px] overflow-hidden">
   <Image
     src="/tms product/Product Mobile.jpg"
     alt="Products"

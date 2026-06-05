@@ -45,8 +45,7 @@ export default function GalleryPage() {
     />
   </div>
 
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-black/70" />
+  
 
   {/* Content */}
   <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -54,7 +53,7 @@ export default function GalleryPage() {
     {/* Badge */}
     <span
       data-aos="fade-down"
-      className="inline-block px-4 py-2 rounded-full border border-[#fed42a]/30 bg-[#fed42a]/10 text-[#fed42a] text-xs sm:text-sm tracking-wider uppercase mb-5"
+      className="inline-block px-4 py-2 rounded-full border border-[#fed42a]/30 bg-[#fed42a]/10 text-[#fed42a] max-sm:mt-8 text-xs sm:text-sm tracking-wider uppercase mb-5"
     >
       Product Collection
     </span>
@@ -109,9 +108,7 @@ export default function GalleryPage() {
     </div>
   </div>
 
-  {/* Simple Bottom Fade */}
-  <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-black to-transparent" />
-</section>
+ </section>
 
       </div>
     </App_layout>

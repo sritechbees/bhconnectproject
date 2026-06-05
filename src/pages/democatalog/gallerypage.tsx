@@ -35,7 +35,7 @@ export default function GalleryPage() {
           </div>
 
           {/* Overlay */}
-          {/* <div className="absolute inset-0 bg-black/70" /> */}
+          <div className="absolute inset-0 bg-black/40" />
 
           {/* Content */}
           <div

@@ -37,10 +37,10 @@ export default function GalleryPage() {
           </div>
 
           {/* Dark Overlay */}
-          {/* <div className="absolute inset-0 bg-black/65" /> */}
+          <div className="absolute inset-0 bg-black/65" />
 
           {/* Content */}
-          <div className="relative z-10 w-full max-sm:8 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 text-center">
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 text-center">
 
             {/* Badge */}
             <span
@@ -70,7 +70,10 @@ export default function GalleryPage() {
               data-aos-delay="200"
               className="mt-6 max-w-3xl mx-auto text-gray-200 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed"
             >
-              Discover innovative healthcare technologies including advanced TMS systems and modern Pain Management solutions.
+             Discover innovative healthcare technologies including advanced TMS systems and modern Pain Management solutions.
+
+TMS Products
+
             </p>
 
             {/* Buttons */}

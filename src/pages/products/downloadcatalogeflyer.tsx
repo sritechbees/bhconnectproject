@@ -45,7 +45,7 @@ export default function Downloadcatalogeflyer() {
 
   return (
     <App_layout>
-    <section className="relative bg-black py-24 mt-4 px-4 sm:px-6 overflow-hidden">
+    <section className="relative bg-black py-24 pb-8 sm:py-24 mt-4 px-4 sm:px-6 overflow-hidden">
 
       {/* Background Glow */}
       <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-[#fed42a]/10 blur-[140px] rounded-full"></div>

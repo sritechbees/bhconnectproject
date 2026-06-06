@@ -324,7 +324,7 @@ export default function ContactSection() {
         <section
           id="contact-form"
           className="relative py-20  md:py-28 bg-[#111111]  scroll-mt-16
-    md:scroll-mt-0 overflow-hidden"
+    md:scroll-mt-8 overflow-hidden"
         >
           {/* Background Glow */}
 

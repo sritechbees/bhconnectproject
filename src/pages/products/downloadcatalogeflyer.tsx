@@ -38,7 +38,7 @@ export default function Downloadcatalogeflyer() {
       title: "E-flyer",
       desc: "Download the complete product catalog including device details and technical specifications.",
       file: "/tms product/TMS e-flyer.pdf",
-      file2: "/pain_managment/Pain Management e-flyer.pdf",
+      file2: "/pain_managment/Pain Management e-flyerpro.pdf",
       icon: <Download className="w-6 h-6" />,
     },
   ];

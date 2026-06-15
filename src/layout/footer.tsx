@@ -172,7 +172,7 @@ export default function Footer() {
                 </p>
 
                 <p className="hover:text-[#fed42a] transition duration-300">
-                  949.838.7924
+                  949.779.8877
                 </p>
               </div>
 

@@ -49,12 +49,12 @@ const products = [
 ];
 
 const galleryImages = [
-  "/home/brain eyes.png",
-  "/home/tmsproduct.jpeg",
-  "/home/Banner-4.png",
-  "/home/tms treatment-1.jpg",
   "/home/tms treatment-3.jpg",
+  "/home/brain eyes.png",
+  "/home/tms treatment-1.jpg",
+  "/home/tmsproduct.jpeg",
   "/home/pmsimage.jpg",
+  "/home/happy and healthy.jpeg",
 ];
 
 export default function ProductsPage() {
